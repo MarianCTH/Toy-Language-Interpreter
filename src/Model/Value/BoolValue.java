@@ -72,8 +72,4 @@ public class BoolValue implements IValue {
         return this.value;
     }
 
-    @Override
-    public IValue clone() {
-        return new BoolValue(this.value);
-    }
 }

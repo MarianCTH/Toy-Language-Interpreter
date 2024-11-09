@@ -9,4 +9,5 @@ public interface IRepository {
     void add(PrgState e);
     void clear();
     PrgState getCrtPrg() throws ToyLangException;
+    void logPrgStateExec() throws ToyLangException;
 }

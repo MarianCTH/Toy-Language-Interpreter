@@ -31,6 +31,7 @@ public class Controller implements IController {
 
         if (this.displayFlag)
             this.displayCurrentState();
+        this.repository.logPrgStateExec();
     }
 
     @Override
@@ -51,7 +52,7 @@ public class Controller implements IController {
     @Override
     public void setProgram(IStatement statement) throws ToyLangException {
         this.repository.clear();
-        this.repository.add(new PrgState(new ExecutionStack(), new SymTable(), new Output(), statement));
+        this.repository.add(new PrgState(new ExecutionStack(), new SymTable(), new Output(), statement, new FileTable()));
         if (this.displayFlag) {
             this.displayCurrentState();
         }

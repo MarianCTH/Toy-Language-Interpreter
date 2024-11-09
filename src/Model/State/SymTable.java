@@ -59,18 +59,6 @@ public class SymTable implements ISymTable {
         return answer.toString();
     }
 
-    @Override
-    public ISymTable copy() throws ToyLangException {
-        ISymTable newSymTable = new SymTable();
-
-        for(String key:data.getKeys()){
-            newSymTable.declValue(key, data.lookup(key).getType());
-            newSymTable.setValue(key, data.lookup(key).clone());
-        }
-
-        return newSymTable;
-    }
-
     public Map<String, IValue> getMap() {
         return this.data.getMap();
     }

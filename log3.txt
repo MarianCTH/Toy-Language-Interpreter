@@ -1,0 +1,81 @@
+Id: 3
+Execution stack:
+BooleanType a
+IntegerType v; a = true; if(a)then {v = 2} else {v = 3}; print(v)
+SymTable:
+Output:
+
+Id: 3
+Execution stack:
+IntegerType v; a = true; if(a)then {v = 2} else {v = 3}; print(v)
+SymTable:
+a(BooleanType):-> false
+Output:
+
+Id: 3
+Execution stack:
+IntegerType v
+a = true; if(a)then {v = 2} else {v = 3}; print(v)
+SymTable:
+a(BooleanType):-> false
+Output:
+
+Id: 3
+Execution stack:
+a = true; if(a)then {v = 2} else {v = 3}; print(v)
+SymTable:
+a(BooleanType):-> false
+v(IntegerType):-> 0
+Output:
+
+Id: 3
+Execution stack:
+a = true
+if(a)then {v = 2} else {v = 3}; print(v)
+SymTable:
+a(BooleanType):-> false
+v(IntegerType):-> 0
+Output:
+
+Id: 3
+Execution stack:
+if(a)then {v = 2} else {v = 3}; print(v)
+SymTable:
+a(BooleanType):-> true
+v(IntegerType):-> 0
+Output:
+
+Id: 3
+Execution stack:
+if(a)then {v = 2} else {v = 3}
+print(v)
+SymTable:
+a(BooleanType):-> true
+v(IntegerType):-> 0
+Output:
+
+Id: 3
+Execution stack:
+v = 2
+print(v)
+SymTable:
+a(BooleanType):-> true
+v(IntegerType):-> 0
+Output:
+
+Id: 3
+Execution stack:
+print(v)
+SymTable:
+a(BooleanType):-> true
+v(IntegerType):-> 2
+Output:
+
+Id: 3
+Execution stack:
+SymTable:
+a(BooleanType):-> true
+v(IntegerType):-> 2
+Output:
+2
+

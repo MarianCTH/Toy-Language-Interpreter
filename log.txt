@@ -1,0 +1,108 @@
+Id: 1
+Execution stack:
+IntegerType v
+v = 2; print(v)
+SymTable:
+Output:
+
+Id: 1
+Execution stack:
+v = 2; print(v)
+SymTable:
+v(IntegerType):-> 0
+Output:
+
+Id: 1
+Execution stack:
+v = 2
+print(v)
+SymTable:
+v(IntegerType):-> 0
+Output:
+
+Id: 1
+Execution stack:
+print(v)
+SymTable:
+v(IntegerType):-> 2
+Output:
+
+Id: 1
+Execution stack:
+SymTable:
+v(IntegerType):-> 2
+Output:
+2
+
+Id: 1
+Execution stack:
+IntegerType a
+IntegerType b; a = (2 + (3 * 5)); b = (a + 1); print(b)
+SymTable:
+Output:
+
+Id: 1
+Execution stack:
+IntegerType b; a = (2 + (3 * 5)); b = (a + 1); print(b)
+SymTable:
+a(IntegerType):-> 0
+Output:
+
+Id: 1
+Execution stack:
+IntegerType b
+a = (2 + (3 * 5)); b = (a + 1); print(b)
+SymTable:
+a(IntegerType):-> 0
+Output:
+
+Id: 1
+Execution stack:
+a = (2 + (3 * 5)); b = (a + 1); print(b)
+SymTable:
+a(IntegerType):-> 0
+b(IntegerType):-> 0
+Output:
+
+Id: 1
+Execution stack:
+a = (2 + (3 * 5))
+b = (a + 1); print(b)
+SymTable:
+a(IntegerType):-> 0
+b(IntegerType):-> 0
+Output:
+
+Id: 1
+Execution stack:
+b = (a + 1); print(b)
+SymTable:
+a(IntegerType):-> 17
+b(IntegerType):-> 0
+Output:
+
+Id: 1
+Execution stack:
+b = (a + 1)
+print(b)
+SymTable:
+a(IntegerType):-> 17
+b(IntegerType):-> 0
+Output:
+
+Id: 1
+Execution stack:
+print(b)
+SymTable:
+a(IntegerType):-> 17
+b(IntegerType):-> 18
+Output:
+
+Id: 1
+Execution stack:
+SymTable:
+a(IntegerType):-> 17
+b(IntegerType):-> 18
+Output:
+18
+

@@ -9,14 +9,16 @@ public class PrgState {
     IExecutionStack executionStack;
     ISymTable symTable;
     IOutput output;
+    IFileTable fileTable;
 
 
-    public PrgState(IExecutionStack executionStack, ISymTable symTable, IOutput output, IStatement statement) {
+    public PrgState(IExecutionStack executionStack, ISymTable symTable, IOutput output, IStatement statement, IFileTable fileTable) {
         this.id = getId();
         this.executionStack = executionStack;
         this.symTable = symTable;
         this.output = output;
         this.executionStack.push(statement);
+        this.fileTable = fileTable;
     }
 
     public synchronized int getId() {
@@ -36,13 +38,21 @@ public class PrgState {
         return output;
     }
 
+    public IFileTable getFileTable() {
+        return fileTable;
+    }
+
     public boolean isNotCompleted() {
         return this.executionStack.size() > 0;
     }
 
     @Override
     public String toString() {
-        return "Id: " + this.id + "\n" + this.executionStack.toString().strip() + "\n" + this.symTable.toString().strip() + "\n" + this.output.toString().strip() + "\n";
+        return "Id: " + this.id + "\n" +
+                this.executionStack.toString().strip() + "\n" +
+                this.symTable.toString().strip() + "\n" +
+                this.output.toString().strip() + "\n" +
+                this.fileTable.toString().strip() + "\n";
     }
 
     public PrgState executeOneStep() throws ToyLangException {
