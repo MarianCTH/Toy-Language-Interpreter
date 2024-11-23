@@ -36,11 +36,12 @@ public class Controller implements IController {
 
     @Override
     public void executeAllSteps() throws ToyLangException {
-        while (true) {
-            if (this.repository.getProgramsList().isEmpty()) {
-                break;
-            }
+        PrgState prg = repository.getCrtPrg();
+        while (!prg.getExeStack().empty()) {
             this.executeOneStep();
+            prg.getHeapTable().setContent(GarbageCollector.unsafeGarbageCollector(
+                    GarbageCollector.getAddrFromSymTable(prg.getSymTable().getContent().values()),
+                    prg.getHeapTable().getContent()));
         }
     }
 

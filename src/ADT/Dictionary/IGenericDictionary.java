@@ -16,6 +16,8 @@ public interface IGenericDictionary<K, V> {
 
     Map<K, V> getMap();
 
+    public void setMap(Map<K, V> map);
+
     List<K> getKeys();
 
     boolean exists(K key);

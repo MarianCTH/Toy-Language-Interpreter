@@ -10,7 +10,7 @@ public class PrgState {
     ISymTable symTable;
     IOutput output;
     IFileTable fileTable;
-
+    IHeapTable heapTable;
 
     public PrgState(IExecutionStack executionStack, ISymTable symTable, IOutput output, IStatement statement, IFileTable fileTable) {
         this.id = getId();
@@ -19,6 +19,7 @@ public class PrgState {
         this.output = output;
         this.executionStack.push(statement);
         this.fileTable = fileTable;
+        this.heapTable = new HeapTable();
     }
 
     public synchronized int getId() {
@@ -42,6 +43,10 @@ public class PrgState {
         return fileTable;
     }
 
+    public IHeapTable getHeapTable() {
+        return heapTable;
+    }
+
     public boolean isNotCompleted() {
         return this.executionStack.size() > 0;
     }
@@ -52,7 +57,8 @@ public class PrgState {
                 this.executionStack.toString().strip() + "\n" +
                 this.symTable.toString().strip() + "\n" +
                 this.output.toString().strip() + "\n" +
-                this.fileTable.toString().strip() + "\n";
+                this.fileTable.toString().strip() + "\n" +
+                this.heapTable.toString() + "\n";
     }
 
     public PrgState executeOneStep() throws ToyLangException {

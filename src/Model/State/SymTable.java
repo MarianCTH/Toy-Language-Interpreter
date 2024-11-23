@@ -59,7 +59,7 @@ public class SymTable implements ISymTable {
         return answer.toString();
     }
 
-    public Map<String, IValue> getMap() {
+    public Map<String, IValue> getContent() {
         return this.data.getMap();
     }
 }

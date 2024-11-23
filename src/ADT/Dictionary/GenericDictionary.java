@@ -59,6 +59,7 @@ public class GenericDictionary<K, V> implements IGenericDictionary<K, V> {
         return map;
     }
 
+    @Override
     public void setMap(Map<K, V> map) {
         this.map = map;
     }
