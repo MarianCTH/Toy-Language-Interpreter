@@ -7,18 +7,16 @@ import java.util.Collection;
 import java.util.List;
 import java.util.Map;
 import java.util.stream.Collectors;
-import java.util.HashSet;
-import java.util.LinkedList;
-import java.util.Queue;
-import java.util.Set;
 import java.util.ArrayList;
 
 public class GarbageCollector {
     public static Map<Integer, IValue> unsafeGarbageCollector(List<Integer> referencedAddresses, Map<Integer, IValue> heap) {
         List<Integer> allReachableAddresses = getAllReachableAddresses(referencedAddresses, heap);
+        //all addresses that are reachable, not just directly from the symbol table but also from nested references within the heap
 
         return heap.entrySet().stream()
                 .filter(entry -> allReachableAddresses.contains(entry.getKey()))
+                //keep entries where the address is in the list of reachable addresses
                 .collect(Collectors.toMap(Map.Entry::getKey, Map.Entry::getValue));
     }
 
@@ -30,22 +28,23 @@ public class GarbageCollector {
     }
 
     private static List<Integer> getAllReachableAddresses(List<Integer> initialAddresses, Map<Integer, IValue> heap) {
-        Set<Integer> reachableAddresses = new HashSet<>(initialAddresses);
-        Queue<Integer> toVisit = new LinkedList<>(initialAddresses);
+        List<Integer> reachableAddresses = new ArrayList<>(initialAddresses);
+        List<Integer> toVisit = new ArrayList<>(initialAddresses);
 
-        while (!toVisit.isEmpty()) {
-            Integer currentAddress = toVisit.poll();
+        for (int i = 0; i < toVisit.size(); i++) {
+            Integer currentAddress = toVisit.get(i);
             IValue value = heap.get(currentAddress);
 
             if (value instanceof RefValue) {
                 Integer nestedAddress = ((RefValue) value).getAddress();
-                if (reachableAddresses.add(nestedAddress)) {
+                if (!reachableAddresses.contains(nestedAddress)) {
+                    reachableAddresses.add(nestedAddress);
                     toVisit.add(nestedAddress);
                 }
             }
         }
 
-        return new ArrayList<>(reachableAddresses);
+        return reachableAddresses;
     }
 
 }

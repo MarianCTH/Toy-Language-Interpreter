@@ -15,13 +15,13 @@ public class RefType implements  IType{
         return new RefValue(0, inner);
     }
 
-    public IType getInner() {
-        return inner;
-    }
-
     @Override
     public String toString() {
         return "RefType " + this.inner.toString();
+    }
+
+    public IType getInner(){
+        return inner;
     }
 
     @Override

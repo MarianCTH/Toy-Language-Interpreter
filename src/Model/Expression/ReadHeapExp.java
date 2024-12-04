@@ -17,9 +17,18 @@ public class ReadHeapExp implements IExpression{
     @Override
     public IValue evaluate(PrgState state) throws ToyLangException {
         IValue value = expr.evaluate(state);
-        if (!(value.getType() instanceof RefType))
-            throw new ToyLangException ("Heap should only be accessed through references");
-        return state.getHeapTable().read(((RefValue) value).getAddress());
+        if (!(value.getType() instanceof RefType)) {
+            throw new ToyLangException("Heap should only be accessed through references");
+        }
+
+        RefValue refValue = (RefValue) value;
+        int address = refValue.getAddress();
+
+        if (!state.getHeapTable().getContent().containsKey(address)) {
+            throw new ToyLangException("Address " + address + " is not defined in the Heap.");
+        }
+
+        return state.getHeapTable().read(address);
     }
 
     @Override

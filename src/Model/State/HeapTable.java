@@ -18,9 +18,12 @@ public class HeapTable implements IHeapTable{
 
     @Override
     public int allocate(IValue value) {
+        int allocatedAddress = firstFree;
+
         heap.insert(firstFree, value);
         firstFree += 1;
-        return firstFree - 1;
+
+        return allocatedAddress;
     }
 
     @Override

@@ -30,6 +30,6 @@ public class WhileStmt implements IStatement{
 
     @Override
     public String toString() {
-        return "While(" + condition.toString() + "){" + statement.toString() + "};";
+        return "While(" + condition.toString() + "){" + statement.toString() + "}";
     }
 }

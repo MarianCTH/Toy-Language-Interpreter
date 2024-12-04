@@ -5,6 +5,9 @@ import Model.State.PrgState;
 import Model.Value.IValue;
 import Model.Value.RefValue;
 import Exception.ToyLangException;
+import Model.Value.Type.RefType;
+
+import java.util.Map;
 
 public class NewStmt implements IStatement{
     String varName;
@@ -18,7 +21,24 @@ public class NewStmt implements IStatement{
     @Override
     public PrgState execute(PrgState state) throws ToyLangException {
         IValue value = expression.evaluate(state);
-        state.getSymTable().setValue(varName, new RefValue(state.getHeapTable().allocate(value), value.getType()));
+
+        Map<String, IValue> symTableContent = state.getSymTable().getContent();
+
+        if (!symTableContent.containsKey(varName)) {
+            throw new ToyLangException("Variable " + varName + " is not defined in the Symbol Table.");
+        }
+
+        IValue varValue = symTableContent.get(varName);
+        if (!(varValue.getType() instanceof RefType refType)) {
+            throw new ToyLangException("Variable " + varName + " is not of RefType.");
+        }
+
+        if (!value.getType().equals(refType.getInner())) {
+            throw new ToyLangException("Type of the evaluated expression does not match the location type of " + varName + ".");
+        }
+
+        state.getSymTable().setValue(varName,
+                                    new RefValue(state.getHeapTable().allocate(value), value.getType()));
         return null;
     }
     @Override

@@ -302,3 +302,1781 @@ FileTable:
 Heap:
 
 
+Id: 9
+ExeStack:
+IntegerType v
+v = 4; While((v > 0)){print(v); v = (v - 1)};; print(v)
+SymTable:
+Out:
+FileTable:
+Heap:
+
+
+Id: 9
+ExeStack:
+v = 4; While((v > 0)){print(v); v = (v - 1)};; print(v)
+SymTable:
+v(IntegerType):-> 0
+Out:
+FileTable:
+Heap:
+
+
+Id: 9
+ExeStack:
+v = 4
+While((v > 0)){print(v); v = (v - 1)};; print(v)
+SymTable:
+v(IntegerType):-> 0
+Out:
+FileTable:
+Heap:
+
+
+Id: 9
+ExeStack:
+While((v > 0)){print(v); v = (v - 1)};; print(v)
+SymTable:
+v(IntegerType):-> 4
+Out:
+FileTable:
+Heap:
+
+
+Id: 9
+ExeStack:
+While((v > 0)){print(v); v = (v - 1)};
+print(v)
+SymTable:
+v(IntegerType):-> 4
+Out:
+FileTable:
+Heap:
+
+
+Id: 9
+ExeStack:
+print(v); v = (v - 1)
+While((v > 0)){print(v); v = (v - 1)};
+print(v)
+SymTable:
+v(IntegerType):-> 4
+Out:
+FileTable:
+Heap:
+
+
+Id: 9
+ExeStack:
+print(v)
+v = (v - 1)
+While((v > 0)){print(v); v = (v - 1)};
+print(v)
+SymTable:
+v(IntegerType):-> 4
+Out:
+FileTable:
+Heap:
+
+
+Id: 9
+ExeStack:
+v = (v - 1)
+While((v > 0)){print(v); v = (v - 1)};
+print(v)
+SymTable:
+v(IntegerType):-> 4
+Out:
+4
+FileTable:
+Heap:
+
+
+Id: 9
+ExeStack:
+While((v > 0)){print(v); v = (v - 1)};
+print(v)
+SymTable:
+v(IntegerType):-> 3
+Out:
+4
+FileTable:
+Heap:
+
+
+Id: 9
+ExeStack:
+print(v); v = (v - 1)
+While((v > 0)){print(v); v = (v - 1)};
+print(v)
+SymTable:
+v(IntegerType):-> 3
+Out:
+4
+FileTable:
+Heap:
+
+
+Id: 9
+ExeStack:
+print(v)
+v = (v - 1)
+While((v > 0)){print(v); v = (v - 1)};
+print(v)
+SymTable:
+v(IntegerType):-> 3
+Out:
+4
+FileTable:
+Heap:
+
+
+Id: 9
+ExeStack:
+v = (v - 1)
+While((v > 0)){print(v); v = (v - 1)};
+print(v)
+SymTable:
+v(IntegerType):-> 3
+Out:
+4
+3
+FileTable:
+Heap:
+
+
+Id: 9
+ExeStack:
+While((v > 0)){print(v); v = (v - 1)};
+print(v)
+SymTable:
+v(IntegerType):-> 2
+Out:
+4
+3
+FileTable:
+Heap:
+
+
+Id: 9
+ExeStack:
+print(v); v = (v - 1)
+While((v > 0)){print(v); v = (v - 1)};
+print(v)
+SymTable:
+v(IntegerType):-> 2
+Out:
+4
+3
+FileTable:
+Heap:
+
+
+Id: 9
+ExeStack:
+print(v)
+v = (v - 1)
+While((v > 0)){print(v); v = (v - 1)};
+print(v)
+SymTable:
+v(IntegerType):-> 2
+Out:
+4
+3
+FileTable:
+Heap:
+
+
+Id: 9
+ExeStack:
+v = (v - 1)
+While((v > 0)){print(v); v = (v - 1)};
+print(v)
+SymTable:
+v(IntegerType):-> 2
+Out:
+4
+3
+2
+FileTable:
+Heap:
+
+
+Id: 9
+ExeStack:
+While((v > 0)){print(v); v = (v - 1)};
+print(v)
+SymTable:
+v(IntegerType):-> 1
+Out:
+4
+3
+2
+FileTable:
+Heap:
+
+
+Id: 9
+ExeStack:
+print(v); v = (v - 1)
+While((v > 0)){print(v); v = (v - 1)};
+print(v)
+SymTable:
+v(IntegerType):-> 1
+Out:
+4
+3
+2
+FileTable:
+Heap:
+
+
+Id: 9
+ExeStack:
+print(v)
+v = (v - 1)
+While((v > 0)){print(v); v = (v - 1)};
+print(v)
+SymTable:
+v(IntegerType):-> 1
+Out:
+4
+3
+2
+FileTable:
+Heap:
+
+
+Id: 9
+ExeStack:
+v = (v - 1)
+While((v > 0)){print(v); v = (v - 1)};
+print(v)
+SymTable:
+v(IntegerType):-> 1
+Out:
+4
+3
+2
+1
+FileTable:
+Heap:
+
+
+Id: 9
+ExeStack:
+While((v > 0)){print(v); v = (v - 1)};
+print(v)
+SymTable:
+v(IntegerType):-> 0
+Out:
+4
+3
+2
+1
+FileTable:
+Heap:
+
+
+Id: 9
+ExeStack:
+print(v)
+SymTable:
+v(IntegerType):-> 0
+Out:
+4
+3
+2
+1
+FileTable:
+Heap:
+
+
+Id: 9
+ExeStack:
+SymTable:
+v(IntegerType):-> 0
+Out:
+4
+3
+2
+1
+0
+FileTable:
+Heap:
+
+
+Id: 9
+ExeStack:
+IntegerType v
+v = 4; While((v > 0)){print(v); v = (v - 1)}; print(v)
+SymTable:
+Out:
+FileTable:
+Heap:
+
+
+Id: 9
+ExeStack:
+v = 4; While((v > 0)){print(v); v = (v - 1)}; print(v)
+SymTable:
+v(IntegerType):-> 0
+Out:
+FileTable:
+Heap:
+
+
+Id: 9
+ExeStack:
+v = 4
+While((v > 0)){print(v); v = (v - 1)}; print(v)
+SymTable:
+v(IntegerType):-> 0
+Out:
+FileTable:
+Heap:
+
+
+Id: 9
+ExeStack:
+While((v > 0)){print(v); v = (v - 1)}; print(v)
+SymTable:
+v(IntegerType):-> 4
+Out:
+FileTable:
+Heap:
+
+
+Id: 9
+ExeStack:
+While((v > 0)){print(v); v = (v - 1)}
+print(v)
+SymTable:
+v(IntegerType):-> 4
+Out:
+FileTable:
+Heap:
+
+
+Id: 9
+ExeStack:
+print(v); v = (v - 1)
+While((v > 0)){print(v); v = (v - 1)}
+print(v)
+SymTable:
+v(IntegerType):-> 4
+Out:
+FileTable:
+Heap:
+
+
+Id: 9
+ExeStack:
+print(v)
+v = (v - 1)
+While((v > 0)){print(v); v = (v - 1)}
+print(v)
+SymTable:
+v(IntegerType):-> 4
+Out:
+FileTable:
+Heap:
+
+
+Id: 9
+ExeStack:
+v = (v - 1)
+While((v > 0)){print(v); v = (v - 1)}
+print(v)
+SymTable:
+v(IntegerType):-> 4
+Out:
+4
+FileTable:
+Heap:
+
+
+Id: 9
+ExeStack:
+While((v > 0)){print(v); v = (v - 1)}
+print(v)
+SymTable:
+v(IntegerType):-> 3
+Out:
+4
+FileTable:
+Heap:
+
+
+Id: 9
+ExeStack:
+print(v); v = (v - 1)
+While((v > 0)){print(v); v = (v - 1)}
+print(v)
+SymTable:
+v(IntegerType):-> 3
+Out:
+4
+FileTable:
+Heap:
+
+
+Id: 9
+ExeStack:
+print(v)
+v = (v - 1)
+While((v > 0)){print(v); v = (v - 1)}
+print(v)
+SymTable:
+v(IntegerType):-> 3
+Out:
+4
+FileTable:
+Heap:
+
+
+Id: 9
+ExeStack:
+v = (v - 1)
+While((v > 0)){print(v); v = (v - 1)}
+print(v)
+SymTable:
+v(IntegerType):-> 3
+Out:
+4
+3
+FileTable:
+Heap:
+
+
+Id: 9
+ExeStack:
+While((v > 0)){print(v); v = (v - 1)}
+print(v)
+SymTable:
+v(IntegerType):-> 2
+Out:
+4
+3
+FileTable:
+Heap:
+
+
+Id: 9
+ExeStack:
+print(v); v = (v - 1)
+While((v > 0)){print(v); v = (v - 1)}
+print(v)
+SymTable:
+v(IntegerType):-> 2
+Out:
+4
+3
+FileTable:
+Heap:
+
+
+Id: 9
+ExeStack:
+print(v)
+v = (v - 1)
+While((v > 0)){print(v); v = (v - 1)}
+print(v)
+SymTable:
+v(IntegerType):-> 2
+Out:
+4
+3
+FileTable:
+Heap:
+
+
+Id: 9
+ExeStack:
+v = (v - 1)
+While((v > 0)){print(v); v = (v - 1)}
+print(v)
+SymTable:
+v(IntegerType):-> 2
+Out:
+4
+3
+2
+FileTable:
+Heap:
+
+
+Id: 9
+ExeStack:
+While((v > 0)){print(v); v = (v - 1)}
+print(v)
+SymTable:
+v(IntegerType):-> 1
+Out:
+4
+3
+2
+FileTable:
+Heap:
+
+
+Id: 9
+ExeStack:
+print(v); v = (v - 1)
+While((v > 0)){print(v); v = (v - 1)}
+print(v)
+SymTable:
+v(IntegerType):-> 1
+Out:
+4
+3
+2
+FileTable:
+Heap:
+
+
+Id: 9
+ExeStack:
+print(v)
+v = (v - 1)
+While((v > 0)){print(v); v = (v - 1)}
+print(v)
+SymTable:
+v(IntegerType):-> 1
+Out:
+4
+3
+2
+FileTable:
+Heap:
+
+
+Id: 9
+ExeStack:
+v = (v - 1)
+While((v > 0)){print(v); v = (v - 1)}
+print(v)
+SymTable:
+v(IntegerType):-> 1
+Out:
+4
+3
+2
+1
+FileTable:
+Heap:
+
+
+Id: 9
+ExeStack:
+While((v > 0)){print(v); v = (v - 1)}
+print(v)
+SymTable:
+v(IntegerType):-> 0
+Out:
+4
+3
+2
+1
+FileTable:
+Heap:
+
+
+Id: 9
+ExeStack:
+print(v)
+SymTable:
+v(IntegerType):-> 0
+Out:
+4
+3
+2
+1
+FileTable:
+Heap:
+
+
+Id: 9
+ExeStack:
+SymTable:
+v(IntegerType):-> 0
+Out:
+4
+3
+2
+1
+0
+FileTable:
+Heap:
+
+
+Id: 9
+ExeStack:
+IntegerType v
+v = 4; While((v > 0)){print(v); v = (v - 1)}; print(v)
+SymTable:
+Out:
+FileTable:
+Heap:
+
+
+Id: 9
+ExeStack:
+v = 4; While((v > 0)){print(v); v = (v - 1)}; print(v)
+SymTable:
+v(IntegerType):-> 0
+Out:
+FileTable:
+Heap:
+
+
+Id: 9
+ExeStack:
+v = 4
+While((v > 0)){print(v); v = (v - 1)}; print(v)
+SymTable:
+v(IntegerType):-> 0
+Out:
+FileTable:
+Heap:
+
+
+Id: 9
+ExeStack:
+While((v > 0)){print(v); v = (v - 1)}; print(v)
+SymTable:
+v(IntegerType):-> 4
+Out:
+FileTable:
+Heap:
+
+
+Id: 9
+ExeStack:
+While((v > 0)){print(v); v = (v - 1)}
+print(v)
+SymTable:
+v(IntegerType):-> 4
+Out:
+FileTable:
+Heap:
+
+
+Id: 9
+ExeStack:
+print(v); v = (v - 1)
+While((v > 0)){print(v); v = (v - 1)}
+print(v)
+SymTable:
+v(IntegerType):-> 4
+Out:
+FileTable:
+Heap:
+
+
+Id: 9
+ExeStack:
+print(v)
+v = (v - 1)
+While((v > 0)){print(v); v = (v - 1)}
+print(v)
+SymTable:
+v(IntegerType):-> 4
+Out:
+FileTable:
+Heap:
+
+
+Id: 9
+ExeStack:
+v = (v - 1)
+While((v > 0)){print(v); v = (v - 1)}
+print(v)
+SymTable:
+v(IntegerType):-> 4
+Out:
+4
+FileTable:
+Heap:
+
+
+Id: 9
+ExeStack:
+While((v > 0)){print(v); v = (v - 1)}
+print(v)
+SymTable:
+v(IntegerType):-> 3
+Out:
+4
+FileTable:
+Heap:
+
+
+Id: 9
+ExeStack:
+print(v); v = (v - 1)
+While((v > 0)){print(v); v = (v - 1)}
+print(v)
+SymTable:
+v(IntegerType):-> 3
+Out:
+4
+FileTable:
+Heap:
+
+
+Id: 9
+ExeStack:
+print(v)
+v = (v - 1)
+While((v > 0)){print(v); v = (v - 1)}
+print(v)
+SymTable:
+v(IntegerType):-> 3
+Out:
+4
+FileTable:
+Heap:
+
+
+Id: 9
+ExeStack:
+v = (v - 1)
+While((v > 0)){print(v); v = (v - 1)}
+print(v)
+SymTable:
+v(IntegerType):-> 3
+Out:
+4
+3
+FileTable:
+Heap:
+
+
+Id: 9
+ExeStack:
+While((v > 0)){print(v); v = (v - 1)}
+print(v)
+SymTable:
+v(IntegerType):-> 2
+Out:
+4
+3
+FileTable:
+Heap:
+
+
+Id: 9
+ExeStack:
+print(v); v = (v - 1)
+While((v > 0)){print(v); v = (v - 1)}
+print(v)
+SymTable:
+v(IntegerType):-> 2
+Out:
+4
+3
+FileTable:
+Heap:
+
+
+Id: 9
+ExeStack:
+print(v)
+v = (v - 1)
+While((v > 0)){print(v); v = (v - 1)}
+print(v)
+SymTable:
+v(IntegerType):-> 2
+Out:
+4
+3
+FileTable:
+Heap:
+
+
+Id: 9
+ExeStack:
+v = (v - 1)
+While((v > 0)){print(v); v = (v - 1)}
+print(v)
+SymTable:
+v(IntegerType):-> 2
+Out:
+4
+3
+2
+FileTable:
+Heap:
+
+
+Id: 9
+ExeStack:
+While((v > 0)){print(v); v = (v - 1)}
+print(v)
+SymTable:
+v(IntegerType):-> 1
+Out:
+4
+3
+2
+FileTable:
+Heap:
+
+
+Id: 9
+ExeStack:
+print(v); v = (v - 1)
+While((v > 0)){print(v); v = (v - 1)}
+print(v)
+SymTable:
+v(IntegerType):-> 1
+Out:
+4
+3
+2
+FileTable:
+Heap:
+
+
+Id: 9
+ExeStack:
+print(v)
+v = (v - 1)
+While((v > 0)){print(v); v = (v - 1)}
+print(v)
+SymTable:
+v(IntegerType):-> 1
+Out:
+4
+3
+2
+FileTable:
+Heap:
+
+
+Id: 9
+ExeStack:
+v = (v - 1)
+While((v > 0)){print(v); v = (v - 1)}
+print(v)
+SymTable:
+v(IntegerType):-> 1
+Out:
+4
+3
+2
+1
+FileTable:
+Heap:
+
+
+Id: 9
+ExeStack:
+While((v > 0)){print(v); v = (v - 1)}
+print(v)
+SymTable:
+v(IntegerType):-> 0
+Out:
+4
+3
+2
+1
+FileTable:
+Heap:
+
+
+Id: 9
+ExeStack:
+print(v)
+SymTable:
+v(IntegerType):-> 0
+Out:
+4
+3
+2
+1
+FileTable:
+Heap:
+
+
+Id: 9
+ExeStack:
+SymTable:
+v(IntegerType):-> 0
+Out:
+4
+3
+2
+1
+0
+FileTable:
+Heap:
+
+
+Id: 9
+ExeStack:
+IntegerType v
+v = 4; While((v > 0)){print(v); v = (v - 1)}; print(v)
+SymTable:
+Out:
+FileTable:
+Heap:
+
+
+Id: 9
+ExeStack:
+v = 4; While((v > 0)){print(v); v = (v - 1)}; print(v)
+SymTable:
+v(IntegerType):-> 0
+Out:
+FileTable:
+Heap:
+
+
+Id: 9
+ExeStack:
+v = 4
+While((v > 0)){print(v); v = (v - 1)}; print(v)
+SymTable:
+v(IntegerType):-> 0
+Out:
+FileTable:
+Heap:
+
+
+Id: 9
+ExeStack:
+While((v > 0)){print(v); v = (v - 1)}; print(v)
+SymTable:
+v(IntegerType):-> 4
+Out:
+FileTable:
+Heap:
+
+
+Id: 9
+ExeStack:
+While((v > 0)){print(v); v = (v - 1)}
+print(v)
+SymTable:
+v(IntegerType):-> 4
+Out:
+FileTable:
+Heap:
+
+
+Id: 9
+ExeStack:
+print(v); v = (v - 1)
+While((v > 0)){print(v); v = (v - 1)}
+print(v)
+SymTable:
+v(IntegerType):-> 4
+Out:
+FileTable:
+Heap:
+
+
+Id: 9
+ExeStack:
+print(v)
+v = (v - 1)
+While((v > 0)){print(v); v = (v - 1)}
+print(v)
+SymTable:
+v(IntegerType):-> 4
+Out:
+FileTable:
+Heap:
+
+
+Id: 9
+ExeStack:
+v = (v - 1)
+While((v > 0)){print(v); v = (v - 1)}
+print(v)
+SymTable:
+v(IntegerType):-> 4
+Out:
+4
+FileTable:
+Heap:
+
+
+Id: 9
+ExeStack:
+While((v > 0)){print(v); v = (v - 1)}
+print(v)
+SymTable:
+v(IntegerType):-> 3
+Out:
+4
+FileTable:
+Heap:
+
+
+Id: 9
+ExeStack:
+print(v); v = (v - 1)
+While((v > 0)){print(v); v = (v - 1)}
+print(v)
+SymTable:
+v(IntegerType):-> 3
+Out:
+4
+FileTable:
+Heap:
+
+
+Id: 9
+ExeStack:
+print(v)
+v = (v - 1)
+While((v > 0)){print(v); v = (v - 1)}
+print(v)
+SymTable:
+v(IntegerType):-> 3
+Out:
+4
+FileTable:
+Heap:
+
+
+Id: 9
+ExeStack:
+v = (v - 1)
+While((v > 0)){print(v); v = (v - 1)}
+print(v)
+SymTable:
+v(IntegerType):-> 3
+Out:
+4
+3
+FileTable:
+Heap:
+
+
+Id: 9
+ExeStack:
+While((v > 0)){print(v); v = (v - 1)}
+print(v)
+SymTable:
+v(IntegerType):-> 2
+Out:
+4
+3
+FileTable:
+Heap:
+
+
+Id: 9
+ExeStack:
+print(v); v = (v - 1)
+While((v > 0)){print(v); v = (v - 1)}
+print(v)
+SymTable:
+v(IntegerType):-> 2
+Out:
+4
+3
+FileTable:
+Heap:
+
+
+Id: 9
+ExeStack:
+print(v)
+v = (v - 1)
+While((v > 0)){print(v); v = (v - 1)}
+print(v)
+SymTable:
+v(IntegerType):-> 2
+Out:
+4
+3
+FileTable:
+Heap:
+
+
+Id: 9
+ExeStack:
+v = (v - 1)
+While((v > 0)){print(v); v = (v - 1)}
+print(v)
+SymTable:
+v(IntegerType):-> 2
+Out:
+4
+3
+2
+FileTable:
+Heap:
+
+
+Id: 9
+ExeStack:
+While((v > 0)){print(v); v = (v - 1)}
+print(v)
+SymTable:
+v(IntegerType):-> 1
+Out:
+4
+3
+2
+FileTable:
+Heap:
+
+
+Id: 9
+ExeStack:
+print(v); v = (v - 1)
+While((v > 0)){print(v); v = (v - 1)}
+print(v)
+SymTable:
+v(IntegerType):-> 1
+Out:
+4
+3
+2
+FileTable:
+Heap:
+
+
+Id: 9
+ExeStack:
+print(v)
+v = (v - 1)
+While((v > 0)){print(v); v = (v - 1)}
+print(v)
+SymTable:
+v(IntegerType):-> 1
+Out:
+4
+3
+2
+FileTable:
+Heap:
+
+
+Id: 9
+ExeStack:
+v = (v - 1)
+While((v > 0)){print(v); v = (v - 1)}
+print(v)
+SymTable:
+v(IntegerType):-> 1
+Out:
+4
+3
+2
+1
+FileTable:
+Heap:
+
+
+Id: 9
+ExeStack:
+While((v > 0)){print(v); v = (v - 1)}
+print(v)
+SymTable:
+v(IntegerType):-> 0
+Out:
+4
+3
+2
+1
+FileTable:
+Heap:
+
+
+Id: 9
+ExeStack:
+print(v)
+SymTable:
+v(IntegerType):-> 0
+Out:
+4
+3
+2
+1
+FileTable:
+Heap:
+
+
+Id: 9
+ExeStack:
+SymTable:
+v(IntegerType):-> 0
+Out:
+4
+3
+2
+1
+0
+FileTable:
+Heap:
+
+
+ExeStack:
+IntegerType v
+v = 4; While((v > 0)){print(v); v = (v - 1)}; print(v)
+SymTable:
+Out:
+FileTable:
+Heap:
+
+
+ExeStack:
+v = 4; While((v > 0)){print(v); v = (v - 1)}; print(v)
+SymTable:
+v(IntegerType):-> 0
+Out:
+FileTable:
+Heap:
+
+
+ExeStack:
+v = 4
+While((v > 0)){print(v); v = (v - 1)}; print(v)
+SymTable:
+v(IntegerType):-> 0
+Out:
+FileTable:
+Heap:
+
+
+ExeStack:
+While((v > 0)){print(v); v = (v - 1)}; print(v)
+SymTable:
+v(IntegerType):-> 4
+Out:
+FileTable:
+Heap:
+
+
+ExeStack:
+While((v > 0)){print(v); v = (v - 1)}
+print(v)
+SymTable:
+v(IntegerType):-> 4
+Out:
+FileTable:
+Heap:
+
+
+ExeStack:
+print(v); v = (v - 1)
+While((v > 0)){print(v); v = (v - 1)}
+print(v)
+SymTable:
+v(IntegerType):-> 4
+Out:
+FileTable:
+Heap:
+
+
+ExeStack:
+print(v)
+v = (v - 1)
+While((v > 0)){print(v); v = (v - 1)}
+print(v)
+SymTable:
+v(IntegerType):-> 4
+Out:
+FileTable:
+Heap:
+
+
+ExeStack:
+v = (v - 1)
+While((v > 0)){print(v); v = (v - 1)}
+print(v)
+SymTable:
+v(IntegerType):-> 4
+Out:
+4
+FileTable:
+Heap:
+
+
+ExeStack:
+While((v > 0)){print(v); v = (v - 1)}
+print(v)
+SymTable:
+v(IntegerType):-> 3
+Out:
+4
+FileTable:
+Heap:
+
+
+ExeStack:
+print(v); v = (v - 1)
+While((v > 0)){print(v); v = (v - 1)}
+print(v)
+SymTable:
+v(IntegerType):-> 3
+Out:
+4
+FileTable:
+Heap:
+
+
+ExeStack:
+print(v)
+v = (v - 1)
+While((v > 0)){print(v); v = (v - 1)}
+print(v)
+SymTable:
+v(IntegerType):-> 3
+Out:
+4
+FileTable:
+Heap:
+
+
+ExeStack:
+v = (v - 1)
+While((v > 0)){print(v); v = (v - 1)}
+print(v)
+SymTable:
+v(IntegerType):-> 3
+Out:
+4
+3
+FileTable:
+Heap:
+
+
+ExeStack:
+While((v > 0)){print(v); v = (v - 1)}
+print(v)
+SymTable:
+v(IntegerType):-> 2
+Out:
+4
+3
+FileTable:
+Heap:
+
+
+ExeStack:
+print(v); v = (v - 1)
+While((v > 0)){print(v); v = (v - 1)}
+print(v)
+SymTable:
+v(IntegerType):-> 2
+Out:
+4
+3
+FileTable:
+Heap:
+
+
+ExeStack:
+print(v)
+v = (v - 1)
+While((v > 0)){print(v); v = (v - 1)}
+print(v)
+SymTable:
+v(IntegerType):-> 2
+Out:
+4
+3
+FileTable:
+Heap:
+
+
+ExeStack:
+v = (v - 1)
+While((v > 0)){print(v); v = (v - 1)}
+print(v)
+SymTable:
+v(IntegerType):-> 2
+Out:
+4
+3
+2
+FileTable:
+Heap:
+
+
+ExeStack:
+While((v > 0)){print(v); v = (v - 1)}
+print(v)
+SymTable:
+v(IntegerType):-> 1
+Out:
+4
+3
+2
+FileTable:
+Heap:
+
+
+ExeStack:
+print(v); v = (v - 1)
+While((v > 0)){print(v); v = (v - 1)}
+print(v)
+SymTable:
+v(IntegerType):-> 1
+Out:
+4
+3
+2
+FileTable:
+Heap:
+
+
+ExeStack:
+print(v)
+v = (v - 1)
+While((v > 0)){print(v); v = (v - 1)}
+print(v)
+SymTable:
+v(IntegerType):-> 1
+Out:
+4
+3
+2
+FileTable:
+Heap:
+
+
+ExeStack:
+v = (v - 1)
+While((v > 0)){print(v); v = (v - 1)}
+print(v)
+SymTable:
+v(IntegerType):-> 1
+Out:
+4
+3
+2
+1
+FileTable:
+Heap:
+
+
+ExeStack:
+While((v > 0)){print(v); v = (v - 1)}
+print(v)
+SymTable:
+v(IntegerType):-> 0
+Out:
+4
+3
+2
+1
+FileTable:
+Heap:
+
+
+ExeStack:
+print(v)
+SymTable:
+v(IntegerType):-> 0
+Out:
+4
+3
+2
+1
+FileTable:
+Heap:
+
+
+ExeStack:
+SymTable:
+v(IntegerType):-> 0
+Out:
+4
+3
+2
+1
+0
+FileTable:
+Heap:
+
+
+ExeStack:
+IntegerType v
+v = 4; While((v > 0)){print(v); v = (v - 1)}; print(v)
+SymTable:
+Out:
+FileTable:
+Heap:
+
+
+ExeStack:
+v = 4; While((v > 0)){print(v); v = (v - 1)}; print(v)
+SymTable:
+v(IntegerType):-> 0
+Out:
+FileTable:
+Heap:
+
+
+ExeStack:
+v = 4
+While((v > 0)){print(v); v = (v - 1)}; print(v)
+SymTable:
+v(IntegerType):-> 0
+Out:
+FileTable:
+Heap:
+
+
+ExeStack:
+While((v > 0)){print(v); v = (v - 1)}; print(v)
+SymTable:
+v(IntegerType):-> 4
+Out:
+FileTable:
+Heap:
+
+
+ExeStack:
+While((v > 0)){print(v); v = (v - 1)}
+print(v)
+SymTable:
+v(IntegerType):-> 4
+Out:
+FileTable:
+Heap:
+
+
+ExeStack:
+print(v); v = (v - 1)
+While((v > 0)){print(v); v = (v - 1)}
+print(v)
+SymTable:
+v(IntegerType):-> 4
+Out:
+FileTable:
+Heap:
+
+
+ExeStack:
+print(v)
+v = (v - 1)
+While((v > 0)){print(v); v = (v - 1)}
+print(v)
+SymTable:
+v(IntegerType):-> 4
+Out:
+FileTable:
+Heap:
+
+
+ExeStack:
+v = (v - 1)
+While((v > 0)){print(v); v = (v - 1)}
+print(v)
+SymTable:
+v(IntegerType):-> 4
+Out:
+4
+FileTable:
+Heap:
+
+
+ExeStack:
+While((v > 0)){print(v); v = (v - 1)}
+print(v)
+SymTable:
+v(IntegerType):-> 3
+Out:
+4
+FileTable:
+Heap:
+
+
+ExeStack:
+print(v); v = (v - 1)
+While((v > 0)){print(v); v = (v - 1)}
+print(v)
+SymTable:
+v(IntegerType):-> 3
+Out:
+4
+FileTable:
+Heap:
+
+
+ExeStack:
+print(v)
+v = (v - 1)
+While((v > 0)){print(v); v = (v - 1)}
+print(v)
+SymTable:
+v(IntegerType):-> 3
+Out:
+4
+FileTable:
+Heap:
+
+
+ExeStack:
+v = (v - 1)
+While((v > 0)){print(v); v = (v - 1)}
+print(v)
+SymTable:
+v(IntegerType):-> 3
+Out:
+4
+3
+FileTable:
+Heap:
+
+
+ExeStack:
+While((v > 0)){print(v); v = (v - 1)}
+print(v)
+SymTable:
+v(IntegerType):-> 2
+Out:
+4
+3
+FileTable:
+Heap:
+
+
+ExeStack:
+print(v); v = (v - 1)
+While((v > 0)){print(v); v = (v - 1)}
+print(v)
+SymTable:
+v(IntegerType):-> 2
+Out:
+4
+3
+FileTable:
+Heap:
+
+
+ExeStack:
+print(v)
+v = (v - 1)
+While((v > 0)){print(v); v = (v - 1)}
+print(v)
+SymTable:
+v(IntegerType):-> 2
+Out:
+4
+3
+FileTable:
+Heap:
+
+
+ExeStack:
+v = (v - 1)
+While((v > 0)){print(v); v = (v - 1)}
+print(v)
+SymTable:
+v(IntegerType):-> 2
+Out:
+4
+3
+2
+FileTable:
+Heap:
+
+
+ExeStack:
+While((v > 0)){print(v); v = (v - 1)}
+print(v)
+SymTable:
+v(IntegerType):-> 1
+Out:
+4
+3
+2
+FileTable:
+Heap:
+
+
+ExeStack:
+print(v); v = (v - 1)
+While((v > 0)){print(v); v = (v - 1)}
+print(v)
+SymTable:
+v(IntegerType):-> 1
+Out:
+4
+3
+2
+FileTable:
+Heap:
+
+
+ExeStack:
+print(v)
+v = (v - 1)
+While((v > 0)){print(v); v = (v - 1)}
+print(v)
+SymTable:
+v(IntegerType):-> 1
+Out:
+4
+3
+2
+FileTable:
+Heap:
+
+
+ExeStack:
+v = (v - 1)
+While((v > 0)){print(v); v = (v - 1)}
+print(v)
+SymTable:
+v(IntegerType):-> 1
+Out:
+4
+3
+2
+1
+FileTable:
+Heap:
+
+
+ExeStack:
+While((v > 0)){print(v); v = (v - 1)}
+print(v)
+SymTable:
+v(IntegerType):-> 0
+Out:
+4
+3
+2
+1
+FileTable:
+Heap:
+
+
+ExeStack:
+print(v)
+SymTable:
+v(IntegerType):-> 0
+Out:
+4
+3
+2
+1
+FileTable:
+Heap:
+
+
+ExeStack:
+SymTable:
+v(IntegerType):-> 0
+Out:
+4
+3
+2
+1
+0
+FileTable:
+Heap:
+
+

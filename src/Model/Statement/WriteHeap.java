@@ -7,6 +7,8 @@ import Model.Value.RefValue;
 import Model.Value.Type.RefType;
 import Exception.ToyLangException;
 
+import java.util.Map;
+
 public class WriteHeap implements IStatement {
     IExpression addressExpression;
     IExpression valueExpression;
@@ -18,12 +20,26 @@ public class WriteHeap implements IStatement {
 
     @Override
     public PrgState execute(PrgState state) throws ToyLangException {
+        Map<String, IValue> symTableContent = state.getSymTable().getContent();
         IValue address = addressExpression.evaluate(state);
-        IValue value = valueExpression.evaluate(state);
-        if (!(address.getType() instanceof RefType)) {
+        if (!(address instanceof RefValue)) {
             throw new ToyLangException("Heap should be accessed only using references");
         }
-        state.getHeapTable().write(((RefValue) address).getAddress(), value);
+
+        RefValue refValue = (RefValue) address;
+        int heapAddress = refValue.getAddress();
+
+        if (!state.getHeapTable().getContent().containsKey(heapAddress)) {
+            throw new ToyLangException("Address " + heapAddress + " is not defined in the Heap.");
+        }
+
+        IValue value = valueExpression.evaluate(state);
+        RefType refType = (RefType) refValue.getType();
+        if (!value.getType().equals(refType.getInner())) {
+            throw new ToyLangException("Type of the evaluated expression does not match the location type.");
+        }
+
+        state.getHeapTable().write(heapAddress, value);
         return null;
     }
 
