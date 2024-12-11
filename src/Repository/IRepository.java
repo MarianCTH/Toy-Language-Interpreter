@@ -5,9 +5,9 @@ import java.util.List;
 import Exception.ToyLangException;
 
 public interface IRepository {
-    List <PrgState> getProgramsList();
+    List <PrgState> getPrgList();
+    void setPrgList(List <PrgState> list);
     void add(PrgState e);
     void clear();
-    PrgState getCrtPrg() throws ToyLangException;
-    void logPrgStateExec() throws ToyLangException;
+    void logPrgStateExec(PrgState program);
 }

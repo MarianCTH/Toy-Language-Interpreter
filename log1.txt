@@ -34,3 +34,407 @@ v(IntegerType):-> 2
 Output:
 2
 
+Id: 0
+ExeStack:
+IntegerType v; v = 2; print(v)
+SymTable:
+Out:
+FileTable:
+Heap:
+
+
+Id: 0
+ExeStack:
+IntegerType v
+v = 2; print(v)
+SymTable:
+Out:
+FileTable:
+Heap:
+
+
+Id: 0
+ExeStack:
+IntegerType v
+v = 2; print(v)
+SymTable:
+Out:
+FileTable:
+Heap:
+
+
+Id: 0
+ExeStack:
+v = 2; print(v)
+SymTable:
+v(IntegerType):-> 0
+Out:
+FileTable:
+Heap:
+
+
+Id: 0
+ExeStack:
+v = 2; print(v)
+SymTable:
+v(IntegerType):-> 0
+Out:
+FileTable:
+Heap:
+
+
+Id: 0
+ExeStack:
+v = 2
+print(v)
+SymTable:
+v(IntegerType):-> 0
+Out:
+FileTable:
+Heap:
+
+
+Id: 0
+ExeStack:
+v = 2
+print(v)
+SymTable:
+v(IntegerType):-> 0
+Out:
+FileTable:
+Heap:
+
+
+Id: 0
+ExeStack:
+print(v)
+SymTable:
+v(IntegerType):-> 2
+Out:
+FileTable:
+Heap:
+
+
+Id: 0
+ExeStack:
+print(v)
+SymTable:
+v(IntegerType):-> 2
+Out:
+FileTable:
+Heap:
+
+
+Id: 0
+ExeStack:
+SymTable:
+v(IntegerType):-> 2
+Out:
+2
+FileTable:
+Heap:
+
+
+Id: 0
+ExeStack:
+IntegerType v; v = 2; print(v)
+SymTable:
+Out:
+FileTable:
+Heap:
+
+
+Id: 0
+ExeStack:
+IntegerType v
+v = 2; print(v)
+SymTable:
+Out:
+FileTable:
+Heap:
+
+
+Id: 0
+ExeStack:
+IntegerType v
+v = 2; print(v)
+SymTable:
+Out:
+FileTable:
+Heap:
+
+
+Id: 0
+ExeStack:
+v = 2; print(v)
+SymTable:
+v(IntegerType):-> 0
+Out:
+FileTable:
+Heap:
+
+
+Id: 0
+ExeStack:
+v = 2; print(v)
+SymTable:
+v(IntegerType):-> 0
+Out:
+FileTable:
+Heap:
+
+
+Id: 0
+ExeStack:
+v = 2
+print(v)
+SymTable:
+v(IntegerType):-> 0
+Out:
+FileTable:
+Heap:
+
+
+Id: 0
+ExeStack:
+v = 2
+print(v)
+SymTable:
+v(IntegerType):-> 0
+Out:
+FileTable:
+Heap:
+
+
+Id: 0
+ExeStack:
+print(v)
+SymTable:
+v(IntegerType):-> 2
+Out:
+FileTable:
+Heap:
+
+
+Id: 0
+ExeStack:
+print(v)
+SymTable:
+v(IntegerType):-> 2
+Out:
+FileTable:
+Heap:
+
+
+Id: 0
+ExeStack:
+SymTable:
+v(IntegerType):-> 2
+Out:
+2
+FileTable:
+Heap:
+
+
+Id: 1
+ExeStack:
+IntegerType v; v = 2; print(v)
+SymTable:
+Out:
+FileTable:
+Heap:
+
+
+Id: 1
+ExeStack:
+IntegerType v
+v = 2; print(v)
+SymTable:
+Out:
+FileTable:
+Heap:
+
+
+Id: 1
+ExeStack:
+IntegerType v
+v = 2; print(v)
+SymTable:
+Out:
+FileTable:
+Heap:
+
+
+Id: 1
+ExeStack:
+v = 2; print(v)
+SymTable:
+v(IntegerType):-> 0
+Out:
+FileTable:
+Heap:
+
+
+Id: 1
+ExeStack:
+v = 2; print(v)
+SymTable:
+v(IntegerType):-> 0
+Out:
+FileTable:
+Heap:
+
+
+Id: 1
+ExeStack:
+v = 2
+print(v)
+SymTable:
+v(IntegerType):-> 0
+Out:
+FileTable:
+Heap:
+
+
+Id: 1
+ExeStack:
+v = 2
+print(v)
+SymTable:
+v(IntegerType):-> 0
+Out:
+FileTable:
+Heap:
+
+
+Id: 1
+ExeStack:
+print(v)
+SymTable:
+v(IntegerType):-> 2
+Out:
+FileTable:
+Heap:
+
+
+Id: 1
+ExeStack:
+print(v)
+SymTable:
+v(IntegerType):-> 2
+Out:
+FileTable:
+Heap:
+
+
+Id: 1
+ExeStack:
+SymTable:
+v(IntegerType):-> 2
+Out:
+2
+FileTable:
+Heap:
+
+
+Id: 1
+ExeStack:
+IntegerType v; v = 2; print(v)
+SymTable:
+Out:
+FileTable:
+Heap:
+
+
+Id: 1
+ExeStack:
+IntegerType v
+v = 2; print(v)
+SymTable:
+Out:
+FileTable:
+Heap:
+
+
+Id: 1
+ExeStack:
+IntegerType v
+v = 2; print(v)
+SymTable:
+Out:
+FileTable:
+Heap:
+
+
+Id: 1
+ExeStack:
+v = 2; print(v)
+SymTable:
+v(IntegerType):-> 0
+Out:
+FileTable:
+Heap:
+
+
+Id: 1
+ExeStack:
+v = 2; print(v)
+SymTable:
+v(IntegerType):-> 0
+Out:
+FileTable:
+Heap:
+
+
+Id: 1
+ExeStack:
+v = 2
+print(v)
+SymTable:
+v(IntegerType):-> 0
+Out:
+FileTable:
+Heap:
+
+
+Id: 1
+ExeStack:
+v = 2
+print(v)
+SymTable:
+v(IntegerType):-> 0
+Out:
+FileTable:
+Heap:
+
+
+Id: 1
+ExeStack:
+print(v)
+SymTable:
+v(IntegerType):-> 2
+Out:
+FileTable:
+Heap:
+
+
+Id: 1
+ExeStack:
+print(v)
+SymTable:
+v(IntegerType):-> 2
+Out:
+FileTable:
+Heap:
+
+
+Id: 1
+ExeStack:
+SymTable:
+v(IntegerType):-> 2
+Out:
+2
+FileTable:
+Heap:
+
+

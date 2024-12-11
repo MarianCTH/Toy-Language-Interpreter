@@ -14,9 +14,9 @@ public class RunExample extends Command {
     @Override
     public void execute() {
         try{
-            ctr.executeAllSteps();
+            ctr.allStep();
         }
-        catch (ToyLangException e){
+        catch (InterruptedException | ToyLangException e){
             System.out.println(e.getMessage());
         }
     }

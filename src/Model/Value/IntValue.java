@@ -110,4 +110,8 @@ public class IntValue implements IValue {
     public int getValue() {
         return this.value;
     }
+    @Override
+    public IValue clone() {
+        return new IntValue(this.value);
+    }
 }

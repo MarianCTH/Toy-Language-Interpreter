@@ -8,4 +8,6 @@ public interface IValue {
     IValue compose(IValue other, String operation) throws ToyLangException;
     IType getType();
     boolean equals(IValue other);
+    IValue clone();
+
 }

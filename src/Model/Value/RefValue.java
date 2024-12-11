@@ -39,4 +39,8 @@ public class RefValue implements IValue{
     public boolean equals(IValue other) {
         return (other instanceof RefValue) && this.address == ((RefValue) other).address && this.getType().equals(other.getType());
     }
+    @Override
+    public IValue clone() {
+        return new RefValue(this.address, this.locationType);
+    }
 }

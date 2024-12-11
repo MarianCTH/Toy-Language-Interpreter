@@ -12,6 +12,7 @@ public interface ISymTable {
     IValue getValue(String name) throws ToyLangException;
     void setValue(String name, IValue value) throws ToyLangException;
     String toString();
+    ISymTable copy() throws ToyLangException;
 
     Map<String, IValue> getContent();
 }

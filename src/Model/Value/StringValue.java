@@ -83,4 +83,9 @@ public class StringValue implements IValue{
                     throw new InvalidOperationException("InvalidOperationException: Cannot compose two StringValue types using operation " + operation);
         };
     }
+
+    @Override
+    public IValue clone() {
+        return new StringValue(this.value);
+    }
 }

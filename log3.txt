@@ -79,3 +79,935 @@ v(IntegerType):-> 2
 Output:
 2
 
+Id: 0
+ExeStack:
+BooleanType a; IntegerType v; a = true; if(a)then {v = 2} else {v = 3}; print(v)
+SymTable:
+Out:
+FileTable:
+Heap:
+
+
+Id: 0
+ExeStack:
+BooleanType a
+IntegerType v; a = true; if(a)then {v = 2} else {v = 3}; print(v)
+SymTable:
+Out:
+FileTable:
+Heap:
+
+
+Id: 0
+ExeStack:
+BooleanType a
+IntegerType v; a = true; if(a)then {v = 2} else {v = 3}; print(v)
+SymTable:
+Out:
+FileTable:
+Heap:
+
+
+Id: 0
+ExeStack:
+IntegerType v; a = true; if(a)then {v = 2} else {v = 3}; print(v)
+SymTable:
+a(BooleanType):-> false
+Out:
+FileTable:
+Heap:
+
+
+Id: 0
+ExeStack:
+IntegerType v; a = true; if(a)then {v = 2} else {v = 3}; print(v)
+SymTable:
+a(BooleanType):-> false
+Out:
+FileTable:
+Heap:
+
+
+Id: 0
+ExeStack:
+IntegerType v
+a = true; if(a)then {v = 2} else {v = 3}; print(v)
+SymTable:
+a(BooleanType):-> false
+Out:
+FileTable:
+Heap:
+
+
+Id: 0
+ExeStack:
+IntegerType v
+a = true; if(a)then {v = 2} else {v = 3}; print(v)
+SymTable:
+a(BooleanType):-> false
+Out:
+FileTable:
+Heap:
+
+
+Id: 0
+ExeStack:
+a = true; if(a)then {v = 2} else {v = 3}; print(v)
+SymTable:
+a(BooleanType):-> false
+v(IntegerType):-> 0
+Out:
+FileTable:
+Heap:
+
+
+Id: 0
+ExeStack:
+a = true; if(a)then {v = 2} else {v = 3}; print(v)
+SymTable:
+a(BooleanType):-> false
+v(IntegerType):-> 0
+Out:
+FileTable:
+Heap:
+
+
+Id: 0
+ExeStack:
+a = true
+if(a)then {v = 2} else {v = 3}; print(v)
+SymTable:
+a(BooleanType):-> false
+v(IntegerType):-> 0
+Out:
+FileTable:
+Heap:
+
+
+Id: 0
+ExeStack:
+a = true
+if(a)then {v = 2} else {v = 3}; print(v)
+SymTable:
+a(BooleanType):-> false
+v(IntegerType):-> 0
+Out:
+FileTable:
+Heap:
+
+
+Id: 0
+ExeStack:
+if(a)then {v = 2} else {v = 3}; print(v)
+SymTable:
+a(BooleanType):-> true
+v(IntegerType):-> 0
+Out:
+FileTable:
+Heap:
+
+
+Id: 0
+ExeStack:
+if(a)then {v = 2} else {v = 3}; print(v)
+SymTable:
+a(BooleanType):-> true
+v(IntegerType):-> 0
+Out:
+FileTable:
+Heap:
+
+
+Id: 0
+ExeStack:
+if(a)then {v = 2} else {v = 3}
+print(v)
+SymTable:
+a(BooleanType):-> true
+v(IntegerType):-> 0
+Out:
+FileTable:
+Heap:
+
+
+Id: 0
+ExeStack:
+if(a)then {v = 2} else {v = 3}
+print(v)
+SymTable:
+a(BooleanType):-> true
+v(IntegerType):-> 0
+Out:
+FileTable:
+Heap:
+
+
+Id: 0
+ExeStack:
+v = 2
+print(v)
+SymTable:
+a(BooleanType):-> true
+v(IntegerType):-> 0
+Out:
+FileTable:
+Heap:
+
+
+Id: 0
+ExeStack:
+v = 2
+print(v)
+SymTable:
+a(BooleanType):-> true
+v(IntegerType):-> 0
+Out:
+FileTable:
+Heap:
+
+
+Id: 0
+ExeStack:
+v = 2
+print(v)
+SymTable:
+a(BooleanType):-> true
+v(IntegerType):-> 0
+Out:
+FileTable:
+Heap:
+
+
+Id: 0
+ExeStack:
+v = 2
+print(v)
+SymTable:
+a(BooleanType):-> true
+v(IntegerType):-> 0
+Out:
+FileTable:
+Heap:
+
+
+Id: 0
+ExeStack:
+SymTable:
+a(BooleanType):-> true
+v(IntegerType):-> 2
+Out:
+2
+FileTable:
+Heap:
+
+
+Id: 0
+ExeStack:
+SymTable:
+a(BooleanType):-> true
+v(IntegerType):-> 2
+Out:
+2
+FileTable:
+Heap:
+
+
+Id: 0
+ExeStack:
+BooleanType a; IntegerType v; a = true; if(a)then {v = 2} else {v = 3}; print(v)
+SymTable:
+Out:
+FileTable:
+Heap:
+
+
+Id: 0
+ExeStack:
+BooleanType a
+IntegerType v; a = true; if(a)then {v = 2} else {v = 3}; print(v)
+SymTable:
+Out:
+FileTable:
+Heap:
+
+
+Id: 0
+ExeStack:
+BooleanType a
+IntegerType v; a = true; if(a)then {v = 2} else {v = 3}; print(v)
+SymTable:
+Out:
+FileTable:
+Heap:
+
+
+Id: 0
+ExeStack:
+IntegerType v; a = true; if(a)then {v = 2} else {v = 3}; print(v)
+SymTable:
+a(BooleanType):-> false
+Out:
+FileTable:
+Heap:
+
+
+Id: 0
+ExeStack:
+IntegerType v; a = true; if(a)then {v = 2} else {v = 3}; print(v)
+SymTable:
+a(BooleanType):-> false
+Out:
+FileTable:
+Heap:
+
+
+Id: 0
+ExeStack:
+IntegerType v
+a = true; if(a)then {v = 2} else {v = 3}; print(v)
+SymTable:
+a(BooleanType):-> false
+Out:
+FileTable:
+Heap:
+
+
+Id: 0
+ExeStack:
+IntegerType v
+a = true; if(a)then {v = 2} else {v = 3}; print(v)
+SymTable:
+a(BooleanType):-> false
+Out:
+FileTable:
+Heap:
+
+
+Id: 0
+ExeStack:
+a = true; if(a)then {v = 2} else {v = 3}; print(v)
+SymTable:
+a(BooleanType):-> false
+v(IntegerType):-> 0
+Out:
+FileTable:
+Heap:
+
+
+Id: 0
+ExeStack:
+a = true; if(a)then {v = 2} else {v = 3}; print(v)
+SymTable:
+a(BooleanType):-> false
+v(IntegerType):-> 0
+Out:
+FileTable:
+Heap:
+
+
+Id: 0
+ExeStack:
+a = true
+if(a)then {v = 2} else {v = 3}; print(v)
+SymTable:
+a(BooleanType):-> false
+v(IntegerType):-> 0
+Out:
+FileTable:
+Heap:
+
+
+Id: 0
+ExeStack:
+a = true
+if(a)then {v = 2} else {v = 3}; print(v)
+SymTable:
+a(BooleanType):-> false
+v(IntegerType):-> 0
+Out:
+FileTable:
+Heap:
+
+
+Id: 0
+ExeStack:
+if(a)then {v = 2} else {v = 3}; print(v)
+SymTable:
+a(BooleanType):-> true
+v(IntegerType):-> 0
+Out:
+FileTable:
+Heap:
+
+
+Id: 0
+ExeStack:
+if(a)then {v = 2} else {v = 3}; print(v)
+SymTable:
+a(BooleanType):-> true
+v(IntegerType):-> 0
+Out:
+FileTable:
+Heap:
+
+
+Id: 0
+ExeStack:
+if(a)then {v = 2} else {v = 3}
+print(v)
+SymTable:
+a(BooleanType):-> true
+v(IntegerType):-> 0
+Out:
+FileTable:
+Heap:
+
+
+Id: 0
+ExeStack:
+if(a)then {v = 2} else {v = 3}
+print(v)
+SymTable:
+a(BooleanType):-> true
+v(IntegerType):-> 0
+Out:
+FileTable:
+Heap:
+
+
+Id: 0
+ExeStack:
+v = 2
+print(v)
+SymTable:
+a(BooleanType):-> true
+v(IntegerType):-> 0
+Out:
+FileTable:
+Heap:
+
+
+Id: 0
+ExeStack:
+v = 2
+print(v)
+SymTable:
+a(BooleanType):-> true
+v(IntegerType):-> 0
+Out:
+FileTable:
+Heap:
+
+
+Id: 0
+ExeStack:
+v = 2
+print(v)
+SymTable:
+a(BooleanType):-> true
+v(IntegerType):-> 0
+Out:
+FileTable:
+Heap:
+
+
+Id: 0
+ExeStack:
+v = 2
+print(v)
+SymTable:
+a(BooleanType):-> true
+v(IntegerType):-> 0
+Out:
+FileTable:
+Heap:
+
+
+Id: 0
+ExeStack:
+SymTable:
+a(BooleanType):-> true
+v(IntegerType):-> 2
+Out:
+2
+FileTable:
+Heap:
+
+
+Id: 0
+ExeStack:
+SymTable:
+a(BooleanType):-> true
+v(IntegerType):-> 2
+Out:
+2
+FileTable:
+Heap:
+
+
+Id: 3
+ExeStack:
+BooleanType a; IntegerType v; a = true; if(a)then {v = 2} else {v = 3}; print(v)
+SymTable:
+Out:
+FileTable:
+Heap:
+
+
+Id: 3
+ExeStack:
+BooleanType a
+IntegerType v; a = true; if(a)then {v = 2} else {v = 3}; print(v)
+SymTable:
+Out:
+FileTable:
+Heap:
+
+
+Id: 3
+ExeStack:
+BooleanType a
+IntegerType v; a = true; if(a)then {v = 2} else {v = 3}; print(v)
+SymTable:
+Out:
+FileTable:
+Heap:
+
+
+Id: 3
+ExeStack:
+IntegerType v; a = true; if(a)then {v = 2} else {v = 3}; print(v)
+SymTable:
+a(BooleanType):-> false
+Out:
+FileTable:
+Heap:
+
+
+Id: 3
+ExeStack:
+IntegerType v; a = true; if(a)then {v = 2} else {v = 3}; print(v)
+SymTable:
+a(BooleanType):-> false
+Out:
+FileTable:
+Heap:
+
+
+Id: 3
+ExeStack:
+IntegerType v
+a = true; if(a)then {v = 2} else {v = 3}; print(v)
+SymTable:
+a(BooleanType):-> false
+Out:
+FileTable:
+Heap:
+
+
+Id: 3
+ExeStack:
+IntegerType v
+a = true; if(a)then {v = 2} else {v = 3}; print(v)
+SymTable:
+a(BooleanType):-> false
+Out:
+FileTable:
+Heap:
+
+
+Id: 3
+ExeStack:
+a = true; if(a)then {v = 2} else {v = 3}; print(v)
+SymTable:
+a(BooleanType):-> false
+v(IntegerType):-> 0
+Out:
+FileTable:
+Heap:
+
+
+Id: 3
+ExeStack:
+a = true; if(a)then {v = 2} else {v = 3}; print(v)
+SymTable:
+a(BooleanType):-> false
+v(IntegerType):-> 0
+Out:
+FileTable:
+Heap:
+
+
+Id: 3
+ExeStack:
+a = true
+if(a)then {v = 2} else {v = 3}; print(v)
+SymTable:
+a(BooleanType):-> false
+v(IntegerType):-> 0
+Out:
+FileTable:
+Heap:
+
+
+Id: 3
+ExeStack:
+a = true
+if(a)then {v = 2} else {v = 3}; print(v)
+SymTable:
+a(BooleanType):-> false
+v(IntegerType):-> 0
+Out:
+FileTable:
+Heap:
+
+
+Id: 3
+ExeStack:
+if(a)then {v = 2} else {v = 3}; print(v)
+SymTable:
+a(BooleanType):-> true
+v(IntegerType):-> 0
+Out:
+FileTable:
+Heap:
+
+
+Id: 3
+ExeStack:
+if(a)then {v = 2} else {v = 3}; print(v)
+SymTable:
+a(BooleanType):-> true
+v(IntegerType):-> 0
+Out:
+FileTable:
+Heap:
+
+
+Id: 3
+ExeStack:
+if(a)then {v = 2} else {v = 3}
+print(v)
+SymTable:
+a(BooleanType):-> true
+v(IntegerType):-> 0
+Out:
+FileTable:
+Heap:
+
+
+Id: 3
+ExeStack:
+if(a)then {v = 2} else {v = 3}
+print(v)
+SymTable:
+a(BooleanType):-> true
+v(IntegerType):-> 0
+Out:
+FileTable:
+Heap:
+
+
+Id: 3
+ExeStack:
+v = 2
+print(v)
+SymTable:
+a(BooleanType):-> true
+v(IntegerType):-> 0
+Out:
+FileTable:
+Heap:
+
+
+Id: 3
+ExeStack:
+v = 2
+print(v)
+SymTable:
+a(BooleanType):-> true
+v(IntegerType):-> 0
+Out:
+FileTable:
+Heap:
+
+
+Id: 3
+ExeStack:
+v = 2
+print(v)
+SymTable:
+a(BooleanType):-> true
+v(IntegerType):-> 0
+Out:
+FileTable:
+Heap:
+
+
+Id: 3
+ExeStack:
+v = 2
+print(v)
+SymTable:
+a(BooleanType):-> true
+v(IntegerType):-> 0
+Out:
+FileTable:
+Heap:
+
+
+Id: 3
+ExeStack:
+SymTable:
+a(BooleanType):-> true
+v(IntegerType):-> 2
+Out:
+2
+FileTable:
+Heap:
+
+
+Id: 3
+ExeStack:
+SymTable:
+a(BooleanType):-> true
+v(IntegerType):-> 2
+Out:
+2
+FileTable:
+Heap:
+
+
+Id: 3
+ExeStack:
+BooleanType a; IntegerType v; a = true; if(a)then {v = 2} else {v = 3}; print(v)
+SymTable:
+Out:
+FileTable:
+Heap:
+
+
+Id: 3
+ExeStack:
+BooleanType a
+IntegerType v; a = true; if(a)then {v = 2} else {v = 3}; print(v)
+SymTable:
+Out:
+FileTable:
+Heap:
+
+
+Id: 3
+ExeStack:
+BooleanType a
+IntegerType v; a = true; if(a)then {v = 2} else {v = 3}; print(v)
+SymTable:
+Out:
+FileTable:
+Heap:
+
+
+Id: 3
+ExeStack:
+IntegerType v; a = true; if(a)then {v = 2} else {v = 3}; print(v)
+SymTable:
+a(BooleanType):-> false
+Out:
+FileTable:
+Heap:
+
+
+Id: 3
+ExeStack:
+IntegerType v; a = true; if(a)then {v = 2} else {v = 3}; print(v)
+SymTable:
+a(BooleanType):-> false
+Out:
+FileTable:
+Heap:
+
+
+Id: 3
+ExeStack:
+IntegerType v
+a = true; if(a)then {v = 2} else {v = 3}; print(v)
+SymTable:
+a(BooleanType):-> false
+Out:
+FileTable:
+Heap:
+
+
+Id: 3
+ExeStack:
+IntegerType v
+a = true; if(a)then {v = 2} else {v = 3}; print(v)
+SymTable:
+a(BooleanType):-> false
+Out:
+FileTable:
+Heap:
+
+
+Id: 3
+ExeStack:
+a = true; if(a)then {v = 2} else {v = 3}; print(v)
+SymTable:
+a(BooleanType):-> false
+v(IntegerType):-> 0
+Out:
+FileTable:
+Heap:
+
+
+Id: 3
+ExeStack:
+a = true; if(a)then {v = 2} else {v = 3}; print(v)
+SymTable:
+a(BooleanType):-> false
+v(IntegerType):-> 0
+Out:
+FileTable:
+Heap:
+
+
+Id: 3
+ExeStack:
+a = true
+if(a)then {v = 2} else {v = 3}; print(v)
+SymTable:
+a(BooleanType):-> false
+v(IntegerType):-> 0
+Out:
+FileTable:
+Heap:
+
+
+Id: 3
+ExeStack:
+a = true
+if(a)then {v = 2} else {v = 3}; print(v)
+SymTable:
+a(BooleanType):-> false
+v(IntegerType):-> 0
+Out:
+FileTable:
+Heap:
+
+
+Id: 3
+ExeStack:
+if(a)then {v = 2} else {v = 3}; print(v)
+SymTable:
+a(BooleanType):-> true
+v(IntegerType):-> 0
+Out:
+FileTable:
+Heap:
+
+
+Id: 3
+ExeStack:
+if(a)then {v = 2} else {v = 3}; print(v)
+SymTable:
+a(BooleanType):-> true
+v(IntegerType):-> 0
+Out:
+FileTable:
+Heap:
+
+
+Id: 3
+ExeStack:
+if(a)then {v = 2} else {v = 3}
+print(v)
+SymTable:
+a(BooleanType):-> true
+v(IntegerType):-> 0
+Out:
+FileTable:
+Heap:
+
+
+Id: 3
+ExeStack:
+if(a)then {v = 2} else {v = 3}
+print(v)
+SymTable:
+a(BooleanType):-> true
+v(IntegerType):-> 0
+Out:
+FileTable:
+Heap:
+
+
+Id: 3
+ExeStack:
+v = 2
+print(v)
+SymTable:
+a(BooleanType):-> true
+v(IntegerType):-> 0
+Out:
+FileTable:
+Heap:
+
+
+Id: 3
+ExeStack:
+v = 2
+print(v)
+SymTable:
+a(BooleanType):-> true
+v(IntegerType):-> 0
+Out:
+FileTable:
+Heap:
+
+
+Id: 3
+ExeStack:
+v = 2
+print(v)
+SymTable:
+a(BooleanType):-> true
+v(IntegerType):-> 0
+Out:
+FileTable:
+Heap:
+
+
+Id: 3
+ExeStack:
+v = 2
+print(v)
+SymTable:
+a(BooleanType):-> true
+v(IntegerType):-> 0
+Out:
+FileTable:
+Heap:
+
+
+Id: 3
+ExeStack:
+SymTable:
+a(BooleanType):-> true
+v(IntegerType):-> 2
+Out:
+2
+FileTable:
+Heap:
+
+
+Id: 3
+ExeStack:
+SymTable:
+a(BooleanType):-> true
+v(IntegerType):-> 2
+Out:
+2
+FileTable:
+Heap:
+
+

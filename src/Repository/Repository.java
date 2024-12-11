@@ -9,7 +9,6 @@ import java.io.PrintWriter;
 import java.io.BufferedWriter;
 import java.io.FileWriter;
 
-
 public class Repository implements IRepository {
     List<PrgState> programs;
     String LogFilePath;
@@ -20,8 +19,12 @@ public class Repository implements IRepository {
     }
 
     @Override
-    public List<PrgState> getProgramsList() {
+    public List<PrgState> getPrgList() {
         return programs;
+    }
+
+    public void setPrgList(List <PrgState> l){
+        this.programs = l;
     }
 
     @Override
@@ -35,19 +38,14 @@ public class Repository implements IRepository {
     }
 
     @Override
-    public PrgState getCrtPrg() {
-        return programs.get(programs.size() - 1);
-    }
-
-    @Override
-    public void logPrgStateExec() {
+    public void logPrgStateExec(PrgState program){
         PrintWriter logFile;
         try{
             logFile= new PrintWriter(new BufferedWriter(new FileWriter(this.LogFilePath, true)));
         } catch (IOException e) {
             throw new RuntimeException(e);
         }
-        logFile.println(getCrtPrg().toString());
+        logFile.println(program.toString());
         logFile.close();
     }
 }

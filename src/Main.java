@@ -1,8 +1,6 @@
 import Controller.Controller;
-import Controller.IController;
 import Repository.IRepository;
 import Repository.Repository;
-import Exception.ToyLangException;
 
 import Model.Expression.*;
 import Model.Statement.*;
@@ -13,11 +11,8 @@ import View.TextMenu.ExitCommand;
 import View.TextMenu.TextMenu;
 import View.TextMenu.RunExample;
 
-
-import java.io.IOException;
-
 public class Main {
-    public static void main(String[] args) throws IOException, ToyLangException {
+    public static void main(String[] args) {
         IStatement ex1 = new CompStmt(new VarDeclStmt("v",new IntType()),
                 new CompStmt(new AssignStmt("v",new ValueExp(new IntValue(2))),
                         new PrintStmt(new VarExp("v"))));
@@ -184,6 +179,42 @@ public class Main {
         Controller ctrl9 = new Controller(repo9,true);
         ctrl9.setProgram(ex9);
 
+        IStatement ex10 = new CompStmt(
+                new VarDeclStmt("v", new IntType()), // int v;
+                new CompStmt(
+                        new VarDeclStmt("a", new RefType(new IntType())), // Ref int a;
+                        new CompStmt(
+                                new AssignStmt("v", new ValueExp(new IntValue(10))), // v = 10;
+                                new CompStmt(
+                                        new NewStmt("a", new ValueExp(new IntValue(22))), // new(a, 22);
+                                        new CompStmt(
+                                                new ForkStmt( // fork statement
+                                                        new CompStmt(
+                                                                new WriteHeap(new VarExp("a"), new ValueExp(new IntValue(30))), // wH(a, 30);
+                                                                new CompStmt(
+                                                                        new AssignStmt("v", new ValueExp(new IntValue(32))), // v = 32;
+                                                                        new CompStmt(
+                                                                                new PrintStmt(new VarExp("v")), // print(v);
+                                                                                new PrintStmt(new ReadHeapExp(new VarExp("a"))) // print(rH(a));
+                                                                        )
+                                                                )
+                                                        )
+                                                ),
+                                                new CompStmt(
+                                                        new PrintStmt(new VarExp("v")), // print(v);
+                                                        new PrintStmt(new ReadHeapExp(new VarExp("a"))) // print(rH(a));
+                                                )
+                                        )
+                                )
+                        )
+                )
+        );
+
+        IRepository repo10 = new Repository("log10.txt");
+        Controller ctrl10 = new Controller(repo10, true);
+        ctrl10.setProgram(ex10);
+
+
         TextMenu menu = new TextMenu();
         menu.addCommand(new ExitCommand("0", "exit"));
         menu.addCommand(new RunExample("1",ex1.toString(),ctrl1));
@@ -195,6 +226,7 @@ public class Main {
         menu.addCommand(new RunExample("7",ex7.toString(),ctrl7)); // heap write example
         menu.addCommand(new RunExample("8",ex8.toString(),ctrl8)); // garbage collector example
         menu.addCommand(new RunExample("9",ex9.toString(),ctrl9)); // while statement example
+        menu.addCommand(new RunExample("10",ex10.toString(),ctrl10)); // fork statement example
 
         menu.show();
     }
