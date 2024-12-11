@@ -214,6 +214,77 @@ public class Main {
         Controller ctrl10 = new Controller(repo10, true);
         ctrl10.setProgram(ex10);
 
+        IStatement ex11 = new CompStmt(
+                new VarDeclStmt("a", new RefType(new IntType())), // Ref(int) a;
+                new CompStmt(
+                        new VarDeclStmt("v", new IntType()), // int v;
+                        new CompStmt(
+                                new NewStmt("a", new ValueExp(new IntValue(10))), // new(a, 10);
+                                new CompStmt(
+                                        new ForkStmt( // fork(
+                                                new CompStmt(
+                                                        new AssignStmt("v", new ValueExp(new IntValue(20))), // v = 20;
+                                                        new CompStmt(
+                                                                new ForkStmt( // fork(
+                                                                        new CompStmt(
+                                                                                new WriteHeap(new VarExp("a"), new ValueExp(new IntValue(40))), // wH(a, 40);
+                                                                                new PrintStmt(new ReadHeapExp(new VarExp("a"))) // print(rH(a));
+                                                                        )
+                                                                ),
+                                                                new PrintStmt(new VarExp("v")) // print(v);
+                                                        )
+                                                )
+                                        ),
+                                        new CompStmt(
+                                                new AssignStmt("v", new ValueExp(new IntValue(30))), // v = 30;
+                                                new CompStmt(
+                                                        new PrintStmt(new VarExp("v")), // print(v);
+                                                        new PrintStmt(new ReadHeapExp(new VarExp("a"))) // print(rH(a));
+                                                )
+                                        )
+                                )
+                        )
+                )
+        );
+
+
+        IRepository repo11 = new Repository("log11.txt");
+        Controller ctrl11 = new Controller(repo11, true);
+        ctrl11.setProgram(ex11);
+
+        IStatement ex12 = new CompStmt(
+                new VarDeclStmt("varf", new StringType()), // string varf;
+                new CompStmt(
+                        new AssignStmt("varf", new ValueExp(new StringValue("test.in"))), // varf = "test.in";
+                        new CompStmt(
+                                new OpenRFile(new VarExp("varf")), // open file varf;
+                                new CompStmt(
+                                        new ForkStmt( // fork(
+                                                new CompStmt(
+                                                        new VarDeclStmt("varc", new IntType()), // int varc;
+                                                        new CompStmt(
+                                                                new ReadFile(new VarExp("varf"), "varc"), // read file(varf, varc);
+                                                                new PrintStmt(new VarExp("varc")) // print(varc);
+                                                        )
+                                                )
+                                        ),
+                                        new CompStmt(
+                                                new VarDeclStmt("varc", new IntType()), // int varc;
+                                                new CompStmt(
+                                                        new ReadFile(new VarExp("varf"), "varc"), // read from file(varf, varc);
+                                                        new CompStmt(
+                                                                new PrintStmt(new VarExp("varc")), // print(varc);
+                                                                new CloseRFile(new VarExp("varf")) // close file(varf);
+                                                        )
+                                                )
+                                        )
+                                )
+                        )
+                )
+        );
+        IRepository repo12 = new Repository("log12.txt");
+        Controller ctrl12 = new Controller(repo12, true);
+        ctrl12.setProgram(ex12);
 
         TextMenu menu = new TextMenu();
         menu.addCommand(new ExitCommand("0", "exit"));
@@ -227,6 +298,8 @@ public class Main {
         menu.addCommand(new RunExample("8",ex8.toString(),ctrl8)); // garbage collector example
         menu.addCommand(new RunExample("9",ex9.toString(),ctrl9)); // while statement example
         menu.addCommand(new RunExample("10",ex10.toString(),ctrl10)); // fork statement example
+        menu.addCommand(new RunExample("11",ex11.toString(),ctrl11)); // fork statement example 2
+        menu.addCommand(new RunExample("12",ex12.toString(),ctrl12)); // fork statement example 3
 
         menu.show();
     }
