@@ -3,14 +3,19 @@ package Controller;
 import Exception.ToyLangException;
 import Model.State.*;
 import Model.Statement.IStatement;
+import Model.Value.IValue;
+import Model.Value.RefValue;
 import Repository.IRepository;
 
-import java.util.List;
-import java.util.Objects;
+import java.util.*;
 import java.util.stream.Collectors;
 import java.util.concurrent.Callable;
 import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
+
+import static Controller.GarbageCollector.getAddrFromSymTable;
+import static Controller.GarbageCollector.conservativeGarbageCollector;
+
 
 public class Controller implements IController {
     IRepository repository;
@@ -63,6 +68,11 @@ public class Controller implements IController {
 
         List<PrgState>  prgList=removeCompletedPrg(repository.getPrgList());
         while(!prgList.isEmpty()){
+            prgList.forEach(prg -> prg.getHeapTable().setContent(conservativeGarbageCollector(
+                    getAddrFromSymTable(prg.getSymTable().getContent().values()),
+                    prg.getHeapTable().getContent())));
+
+
             oneStepForAllPrg(prgList);
             prgList=removeCompletedPrg(repository.getPrgList());
         }

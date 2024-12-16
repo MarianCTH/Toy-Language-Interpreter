@@ -10,7 +10,7 @@ import java.util.stream.Collectors;
 import java.util.ArrayList;
 
 public class GarbageCollector {
-    public static Map<Integer, IValue> unsafeGarbageCollector(List<Integer> referencedAddresses, Map<Integer, IValue> heap) {
+    public static Map<Integer, IValue> conservativeGarbageCollector(List<Integer> referencedAddresses, Map<Integer, IValue> heap) {
         List<Integer> allReachableAddresses = getAllReachableAddresses(referencedAddresses, heap);
         //all addresses that are reachable, not just directly from the symbol table but also from nested references within the heap
 
