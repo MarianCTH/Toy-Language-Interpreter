@@ -1,5 +1,6 @@
 package Model.Expression;
 
+import ADT.Dictionary.IGenericDictionary;
 import Model.State.PrgState;
 import Model.Value.IValue;
 import Model.Value.RefValue;
@@ -34,5 +35,14 @@ public class ReadHeapExp implements IExpression{
     @Override
     public String toString() {
         return "readHeap(" + expr.toString() + ")";
+    }
+
+    @Override
+    public IType typecheck(IGenericDictionary<String, IType> typeEnv) throws ToyLangException{
+        IType type = expr.typecheck(typeEnv);
+        if (!(type instanceof RefType reft))
+            throw new ToyLangException("Heap should only be accessed through references");
+
+        return reft.getInner();
     }
 }

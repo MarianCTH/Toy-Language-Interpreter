@@ -1,5 +1,6 @@
 package Model.Statement;
 
+import ADT.Dictionary.IGenericDictionary;
 import Exception.ToyLangException;
 import Model.State.PrgState;
 import Model.Value.Type.IType;
@@ -21,5 +22,11 @@ public class VarDeclStmt implements IStatement{
     @Override
     public String toString(){
         return type.toString() + " " + name;
+    }
+
+    @Override
+    public IGenericDictionary<String, IType> typecheck(IGenericDictionary<String, IType> typeDictionary) throws ToyLangException {
+        typeDictionary.insert(name, type);
+        return typeDictionary;
     }
 }

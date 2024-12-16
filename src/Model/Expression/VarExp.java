@@ -1,8 +1,10 @@
 package Model.Expression;
 
+import ADT.Dictionary.IGenericDictionary;
 import Exception.ToyLangException;
 import Model.State.PrgState;
 import Model.Value.IValue;
+import Model.Value.Type.IType;
 
 public class VarExp implements IExpression {
     String name;
@@ -21,4 +23,8 @@ public class VarExp implements IExpression {
         return name;
     }
 
+    @Override
+    public IType typecheck(IGenericDictionary<String, IType> typeEnv) throws ToyLangException {
+        return typeEnv.lookup(name);
+    }
 }

@@ -1,8 +1,12 @@
 package Model.Expression;
 
+import ADT.Dictionary.IGenericDictionary;
 import Exception.ToyLangException;
 import Model.State.PrgState;
 import Model.Value.IValue;
+import Model.Value.Type.BoolType;
+import Model.Value.Type.IType;
+import Model.Value.Type.IntType;
 
 public class ArithExp implements IExpression {
     IExpression left;
@@ -36,5 +40,21 @@ public class ArithExp implements IExpression {
     @Override
     public String toString() {
         return "(" + left.toString() + " " + operator + " " + right.toString() + ")";
+    }
+
+    @Override
+    public IType typecheck(IGenericDictionary<String, IType> typeDictionary) throws ToyLangException {
+        IType firstType = left.typecheck(typeDictionary);
+        IType secondType = right.typecheck(typeDictionary);
+
+        if (firstType == null || !firstType.equals(secondType)) {
+            throw new ToyLangException("Binary expression operands are not the same");
+        }
+
+        return switch (operator) {
+            case "+", "-", "*", "/" -> new IntType();
+            case "<", "<=", ">", ">=", "==", "!=" -> new BoolType();
+            default -> firstType;
+        };
     }
 }

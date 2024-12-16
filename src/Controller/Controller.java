@@ -3,8 +3,6 @@ package Controller;
 import Exception.ToyLangException;
 import Model.State.*;
 import Model.Statement.IStatement;
-import Model.Value.IValue;
-import Model.Value.RefValue;
 import Repository.IRepository;
 
 import java.util.*;
@@ -15,6 +13,7 @@ import java.util.concurrent.Executors;
 
 import static Controller.GarbageCollector.getAddrFromSymTable;
 import static Controller.GarbageCollector.conservativeGarbageCollector;
+import ADT.Dictionary.GenericDictionary;
 
 
 public class Controller implements IController {
@@ -87,7 +86,8 @@ public class Controller implements IController {
     }
 
     @Override
-    public void setProgram(IStatement statement) {
+    public void setProgram(IStatement statement) throws ToyLangException {
+        statement.typecheck(new GenericDictionary<>());
         this.repository.clear();
         this.repository.add(new PrgState(new ExecutionStack(), new SymTable(), new Output(), statement, new FileTable(), new HeapTable()));
         if (this.displayFlag) {

@@ -1,10 +1,12 @@
 package Model.Statement;
 
+import ADT.Dictionary.IGenericDictionary;
 import Model.Expression.IExpression;
 import Model.State.PrgState;
 import Model.Value.IValue;
 import Model.Value.RefValue;
 import Exception.ToyLangException;
+import Model.Value.Type.IType;
 import Model.Value.Type.RefType;
 
 import java.util.Map;
@@ -37,12 +39,22 @@ public class NewStmt implements IStatement{
             throw new ToyLangException("Type of the evaluated expression does not match the location type of " + varName + ".");
         }
 
-        state.getSymTable().setValue(varName,
-                                    new RefValue(state.getHeapTable().allocate(value), value.getType()));
+        state.getSymTable().setValue(varName, new RefValue(state.getHeapTable().allocate(value), value.getType()));
         return null;
     }
     @Override
     public String toString() {
         return "new(" + varName + ", " + expression.toString() + ")";
+    }
+
+    @Override
+    public IGenericDictionary<String, IType> typecheck(IGenericDictionary<String, IType> typeDictionary) throws ToyLangException {
+        IType variableType = typeDictionary.lookup(varName);
+        IType expressionType = expression.typecheck(typeDictionary);
+
+        if (variableType.equals(new RefType(expressionType)))
+            return typeDictionary;
+
+        throw new ToyLangException("NEW stmt: right hand side and left hand side have different types.");
     }
 }

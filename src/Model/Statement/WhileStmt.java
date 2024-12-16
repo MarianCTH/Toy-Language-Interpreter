@@ -1,5 +1,6 @@
 package Model.Statement;
 
+import ADT.Dictionary.IGenericDictionary;
 import Exception.ToyLangException;
 import Model.Expression.IExpression;
 import Model.State.PrgState;
@@ -31,5 +32,14 @@ public class WhileStmt implements IStatement{
     @Override
     public String toString() {
         return "While(" + condition.toString() + "){" + statement.toString() + "}";
+    }
+
+    @Override
+    public IGenericDictionary<String, IType> typecheck(IGenericDictionary<String, IType> typeEnv) throws ToyLangException {
+        IType typexp=condition.typecheck(typeEnv);
+        if (typexp.equals(new BoolType())) {
+            return statement.typecheck(typeEnv);
+        }
+        else throw new ToyLangException("The condition of WHILE has not the type bool");
     }
 }

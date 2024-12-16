@@ -1,9 +1,11 @@
 package Model.Statement;
 
+import ADT.Dictionary.IGenericDictionary;
 import Model.Expression.IExpression;
 import Model.State.PrgState;
 import Model.Value.IValue;
 import Exception.ToyLangException;
+import Model.Value.Type.IType;
 import Model.Value.Type.StringType;
 
 
@@ -27,5 +29,13 @@ public class CloseRFile implements IStatement{
     @Override
     public String toString() {
         return "closeRFile(" + exp.toString() + ")";
+    }
+
+    @Override
+    public IGenericDictionary<String, IType> typecheck(IGenericDictionary<String, IType> typeDictionary) throws ToyLangException {
+        if ((new StringType()).equals(exp.typecheck(typeDictionary)))
+            return typeDictionary;
+
+        throw new ToyLangException("Close file expression doesn't evaluate to a StringType");
     }
 }

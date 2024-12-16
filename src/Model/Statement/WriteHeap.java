@@ -1,9 +1,11 @@
 package Model.Statement;
 
+import ADT.Dictionary.IGenericDictionary;
 import Model.Expression.IExpression;
 import Model.State.PrgState;
 import Model.Value.IValue;
 import Model.Value.RefValue;
+import Model.Value.Type.IType;
 import Model.Value.Type.RefType;
 import Exception.ToyLangException;
 
@@ -46,5 +48,15 @@ public class WriteHeap implements IStatement {
     @Override
     public String toString() {
         return "writeHeap(" + addressExpression.toString() + ", " + valueExpression.toString() + ")";
+    }
+
+    @Override
+    public IGenericDictionary<String, IType> typecheck(IGenericDictionary<String, IType> typeDictionary) throws ToyLangException {
+        IType addressType = addressExpression.typecheck(typeDictionary);
+        valueExpression.typecheck(typeDictionary);
+        if (!(addressType instanceof RefType))
+            throw new ToyLangException("Write heap expression does not evaluate to a RefType");
+
+        return typeDictionary;
     }
 }

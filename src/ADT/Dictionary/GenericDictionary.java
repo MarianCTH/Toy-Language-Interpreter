@@ -68,4 +68,13 @@ public class GenericDictionary<K, V> implements IGenericDictionary<K, V> {
     public List<K> getKeys() {
         return new ArrayList<>(this.map.keySet());
     }
+
+    @Override
+    public IGenericDictionary<K, V> copy() {
+        GenericDictionary<K, V> answer = new GenericDictionary<>();
+        for (K key : this.map.keySet())
+            answer.map.put(key, this.map.get(key));
+        return answer;
+
+    }
 }

@@ -1,7 +1,9 @@
 package Model.Expression;
 
+import ADT.Dictionary.IGenericDictionary;
 import Model.State.PrgState;
 import Model.Value.IValue;
+import Model.Value.Type.IType;
 
 public class ValueExp implements IExpression {
     IValue value;
@@ -18,5 +20,10 @@ public class ValueExp implements IExpression {
     @Override
     public String toString() {
         return value.toString();
+    }
+
+    @Override
+    public IType typecheck(IGenericDictionary<String, IType> typeEnv) {
+        return value.getType();
     }
 }

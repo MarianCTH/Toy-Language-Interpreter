@@ -1,8 +1,10 @@
 package Model.Statement;
 
+import ADT.Dictionary.IGenericDictionary;
 import Model.State.ExecutionStack;
 import Model.State.PrgState;
 import Exception.ToyLangException;
+import Model.Value.Type.IType;
 
 public class ForkStmt implements IStatement {
     IStatement innerStatement;
@@ -19,5 +21,10 @@ public class ForkStmt implements IStatement {
     @Override
     public String toString() {
         return "fork(" + innerStatement.toString() + ")";
+    }
+
+    @Override
+    public IGenericDictionary<String, IType> typecheck(IGenericDictionary<String, IType> typeDictionary) throws ToyLangException {
+        return innerStatement.typecheck(typeDictionary);
     }
 }

@@ -1,8 +1,10 @@
 package Model.Statement;
 
+import ADT.Dictionary.IGenericDictionary;
 import Exception.ToyLangException;
 import Model.Expression.IExpression;
 import Model.State.PrgState;
+import Model.Value.Type.IType;
 
 public class AssignStmt implements IStatement {
     String variableName;
@@ -22,5 +24,16 @@ public class AssignStmt implements IStatement {
     @Override
     public String toString() {
         return variableName + " = " + expression.toString();
+    }
+
+    @Override
+    public IGenericDictionary<String, IType> typecheck(IGenericDictionary<String, IType> typeDictionary) throws ToyLangException {
+        IType variableType = typeDictionary.lookup(variableName);
+        IType expressionType = expression.typecheck(typeDictionary);
+
+        if (variableType.equals(expressionType))
+            return typeDictionary;
+        else
+            throw new ToyLangException("Assignment: right hand side and left hand side have different types ");
     }
 }

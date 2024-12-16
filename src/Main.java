@@ -10,9 +10,10 @@ import Model.Value.Type.*;
 import View.TextMenu.ExitCommand;
 import View.TextMenu.TextMenu;
 import View.TextMenu.RunExample;
+import Exception.ToyLangException;
 
 public class Main {
-    public static void main(String[] args) {
+    public static void main(String[] args) throws ToyLangException{
         IStatement ex1 = new CompStmt(new VarDeclStmt("v",new IntType()),
                 new CompStmt(new AssignStmt("v",new ValueExp(new IntValue(2))),
                         new PrintStmt(new VarExp("v"))));
