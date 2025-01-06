@@ -739,3 +739,199 @@ FileTable:
 Heap:
 
 
+Id: 2
+ExeStack:
+IntegerType a; IntegerType b; a = (2 + (3 * 5)); b = (a + 1); print(b)
+SymTable:
+Out:
+FileTable:
+Heap:
+
+
+Id: 2
+ExeStack:
+IntegerType a
+IntegerType b; a = (2 + (3 * 5)); b = (a + 1); print(b)
+SymTable:
+Out:
+FileTable:
+Heap:
+
+
+Id: 2
+ExeStack:
+IntegerType a
+IntegerType b; a = (2 + (3 * 5)); b = (a + 1); print(b)
+SymTable:
+Out:
+FileTable:
+Heap:
+
+
+Id: 2
+ExeStack:
+IntegerType b; a = (2 + (3 * 5)); b = (a + 1); print(b)
+SymTable:
+a(IntegerType):-> 0
+Out:
+FileTable:
+Heap:
+
+
+Id: 2
+ExeStack:
+IntegerType b; a = (2 + (3 * 5)); b = (a + 1); print(b)
+SymTable:
+a(IntegerType):-> 0
+Out:
+FileTable:
+Heap:
+
+
+Id: 2
+ExeStack:
+IntegerType b
+a = (2 + (3 * 5)); b = (a + 1); print(b)
+SymTable:
+a(IntegerType):-> 0
+Out:
+FileTable:
+Heap:
+
+
+Id: 2
+ExeStack:
+IntegerType b
+a = (2 + (3 * 5)); b = (a + 1); print(b)
+SymTable:
+a(IntegerType):-> 0
+Out:
+FileTable:
+Heap:
+
+
+Id: 2
+ExeStack:
+a = (2 + (3 * 5)); b = (a + 1); print(b)
+SymTable:
+a(IntegerType):-> 0
+b(IntegerType):-> 0
+Out:
+FileTable:
+Heap:
+
+
+Id: 2
+ExeStack:
+a = (2 + (3 * 5)); b = (a + 1); print(b)
+SymTable:
+a(IntegerType):-> 0
+b(IntegerType):-> 0
+Out:
+FileTable:
+Heap:
+
+
+Id: 2
+ExeStack:
+a = (2 + (3 * 5))
+b = (a + 1); print(b)
+SymTable:
+a(IntegerType):-> 0
+b(IntegerType):-> 0
+Out:
+FileTable:
+Heap:
+
+
+Id: 2
+ExeStack:
+a = (2 + (3 * 5))
+b = (a + 1); print(b)
+SymTable:
+a(IntegerType):-> 0
+b(IntegerType):-> 0
+Out:
+FileTable:
+Heap:
+
+
+Id: 2
+ExeStack:
+b = (a + 1); print(b)
+SymTable:
+a(IntegerType):-> 17
+b(IntegerType):-> 0
+Out:
+FileTable:
+Heap:
+
+
+Id: 2
+ExeStack:
+b = (a + 1); print(b)
+SymTable:
+a(IntegerType):-> 17
+b(IntegerType):-> 0
+Out:
+FileTable:
+Heap:
+
+
+Id: 2
+ExeStack:
+b = (a + 1)
+print(b)
+SymTable:
+a(IntegerType):-> 17
+b(IntegerType):-> 0
+Out:
+FileTable:
+Heap:
+
+
+Id: 2
+ExeStack:
+b = (a + 1)
+print(b)
+SymTable:
+a(IntegerType):-> 17
+b(IntegerType):-> 0
+Out:
+FileTable:
+Heap:
+
+
+Id: 2
+ExeStack:
+print(b)
+SymTable:
+a(IntegerType):-> 17
+b(IntegerType):-> 18
+Out:
+FileTable:
+Heap:
+
+
+Id: 2
+ExeStack:
+print(b)
+SymTable:
+a(IntegerType):-> 17
+b(IntegerType):-> 18
+Out:
+FileTable:
+Heap:
+
+
+Id: 2
+ExeStack:
+SymTable:
+a(IntegerType):-> 17
+b(IntegerType):-> 18
+Out:
+18
+FileTable:
+Heap:
+
+
