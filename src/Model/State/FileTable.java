@@ -12,6 +12,7 @@ import java.io.BufferedReader;
 import java.io.FileReader;
 import java.io.IOException;
 import java.io.FileNotFoundException;
+import java.util.List;
 
 
 public class FileTable implements IFileTable{
@@ -86,5 +87,10 @@ public class FileTable implements IFileTable{
         }
 
         return answer.toString();
+    }
+
+    @Override
+    public List<String> getKeys(){
+        return files.getKeys();
     }
 }

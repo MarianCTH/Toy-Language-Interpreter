@@ -33,14 +33,17 @@ public class Controller implements IController {
     public Controller(IRepository repository, boolean displayFlag) {
         this.repository = repository;
         this.displayFlag = displayFlag;
+        this.executor = Executors.newFixedThreadPool(2);
     }
 
     @Override
     public void oneStepForAllPrg(List<PrgState> prgList) throws InterruptedException {
-        prgList.forEach(prg ->repository.logPrgStateExec(prg));
+        prgList.forEach(prg -> repository.logPrgStateExec(prg));
+
         List<Callable<PrgState>> callList = prgList.stream()
                 .map((PrgState p) -> (Callable<PrgState>)(p::oneStep))
                 .collect(Collectors.toList());
+
         List<PrgState> newPrgList = executor.invokeAll(callList).stream()
                 .map(future -> {
                     try {
@@ -51,15 +54,13 @@ public class Controller implements IController {
                     return null;
                 })
                 .filter(Objects::nonNull)
-                .toList();
+                .collect(Collectors.toList());
 
         prgList.addAll(newPrgList);
         prgList.forEach(prg -> repository.logPrgStateExec(prg));
-        if (this.displayFlag) {
-            this.displayCurrentState();
-        }
-        repository.setPrgList(prgList);
+        repository.setPrgList(prgList); // Ensure the repository is updated with new program states
     }
+
 
     @Override
     public void allStep() throws ToyLangException, InterruptedException {
@@ -100,5 +101,10 @@ public class Controller implements IController {
         return inPrgList.stream()
                 .filter(PrgState::isNotCompleted)
                 .collect(Collectors.toList());
+    }
+
+    @Override
+    public List<PrgState> getPrgList() {
+        return repository.getPrgList();
     }
 }

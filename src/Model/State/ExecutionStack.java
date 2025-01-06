@@ -6,6 +6,9 @@ import Exception.StackEmptyException;
 import Exception.ToyLangException;
 import Model.Statement.IStatement;
 
+import java.util.ArrayList;
+import java.util.List;
+
 public class ExecutionStack implements IExecutionStack {
     IGenericStack<IStatement> stack;
 
@@ -49,5 +52,25 @@ public class ExecutionStack implements IExecutionStack {
             throw new RuntimeException(exception.getMessage());
         }
         return answer.toString();
+    }
+
+    @Override
+    public List<String> getStackAsStrings() {
+        List<String> stackStrings = new ArrayList<>();
+        IGenericStack<IStatement> tmpStack = new GenericStack<>();
+        try {
+            // Temporarily store the stack items in the temporary stack and add them to the list
+            while (!stack.isEmpty()) {
+                tmpStack.push(stack.pop());
+            }
+            // Now add the elements from tmpStack to the list
+            while (!tmpStack.isEmpty()) {
+                stackStrings.add(tmpStack.top().toString());
+                stack.push(tmpStack.pop());  // Restore the stack back to the original state
+            }
+        } catch (ToyLangException exception) {
+            throw new RuntimeException(exception.getMessage());
+        }
+        return stackStrings;
     }
 }

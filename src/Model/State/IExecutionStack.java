@@ -2,6 +2,7 @@ package Model.State;
 
 import Exception.StackEmptyException;
 import Model.Statement.IStatement;
+import java.util.List;
 
 public interface IExecutionStack {
     IStatement pop() throws StackEmptyException;
@@ -13,4 +14,6 @@ public interface IExecutionStack {
     int size();
 
     String toString();
+
+    List<String> getStackAsStrings();
 }

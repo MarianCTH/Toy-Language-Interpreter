@@ -18,4 +18,6 @@ public interface IController {
     boolean getDisplayFlag();
 
     List<PrgState> removeCompletedPrg(List<PrgState> inPrgList);
+
+    List<PrgState> getPrgList();
 }
