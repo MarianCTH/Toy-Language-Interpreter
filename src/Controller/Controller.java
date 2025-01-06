@@ -87,12 +87,12 @@ public class Controller implements IController {
 
     @Override
     public void setProgram(IStatement statement) throws ToyLangException {
-        statement.typecheck(new GenericDictionary<>());
-        this.repository.clear();
-        this.repository.add(new PrgState(new ExecutionStack(), new SymTable(), new Output(), statement, new FileTable(), new HeapTable()));
-        if (this.displayFlag) {
-            this.displayCurrentState();
-        }
+            statement.typecheck(new GenericDictionary<>());
+            this.repository.clear();
+            this.repository.add(new PrgState(new ExecutionStack(), new SymTable(), new Output(), statement, new FileTable(), new HeapTable()));
+            if (this.displayFlag) {
+                this.displayCurrentState();
+            }
     }
 
     @Override

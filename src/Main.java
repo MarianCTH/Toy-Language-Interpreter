@@ -14,12 +14,20 @@ import Exception.ToyLangException;
 
 public class Main {
     public static void main(String[] args) throws ToyLangException{
+        TextMenu menu = new TextMenu();
+        menu.addCommand(new ExitCommand("0", "exit"));
+
         IStatement ex1 = new CompStmt(new VarDeclStmt("v",new IntType()),
                 new CompStmt(new AssignStmt("v",new ValueExp(new IntValue(2))),
                         new PrintStmt(new VarExp("v"))));
         IRepository repo1 = new Repository("log1.txt");
         Controller ctrl1 = new Controller(repo1,true);
-        ctrl1.setProgram(ex1);
+        try{
+            ctrl1.setProgram(ex1);
+            menu.addCommand(new RunExample("1",ex1.toString(),ctrl1));
+        } catch (ToyLangException e) {
+            System.out.println(e);
+        }
 
         IStatement ex2 = new CompStmt( new VarDeclStmt("a",new IntType()),
                 new CompStmt(new VarDeclStmt("b",new IntType()),
@@ -29,7 +37,12 @@ public class Main {
                                         IntValue(1)))), new PrintStmt(new VarExp("b"))))));
         IRepository repo2 = new Repository("log2.txt");
         Controller ctrl2 = new Controller(repo2,true);
-        ctrl2.setProgram(ex2);
+        try{
+            ctrl2.setProgram(ex2);
+            menu.addCommand(new RunExample("2",ex2.toString(),ctrl2));
+        } catch (ToyLangException e) {
+            System.out.println(e);
+        }
 
         IStatement ex3 = new CompStmt(new VarDeclStmt("a",new BoolType()),
                 new CompStmt(new VarDeclStmt("v", new IntType()),
@@ -39,7 +52,12 @@ public class Main {
                                         VarExp("v"))))));
         IRepository repo3 = new Repository("log3.txt");
         Controller ctrl3 = new Controller(repo3,true);
-        ctrl3.setProgram(ex3);
+        try{
+            ctrl3.setProgram(ex3);
+            menu.addCommand(new RunExample("3",ex3.toString(),ctrl3));
+        } catch (ToyLangException e) {
+            System.out.println(e);
+        }
 
         IStatement ex4 = new CompStmt(
                 new VarDeclStmt("varf", new StringType()),
@@ -68,7 +86,12 @@ public class Main {
         );
         IRepository repo4 = new Repository("log4.txt");
         Controller ctrl4 = new Controller(repo4,true);
-        ctrl4.setProgram(ex4);
+        try{
+            ctrl4.setProgram(ex4);
+            menu.addCommand(new RunExample("4",ex4.toString(),ctrl4));
+        } catch (ToyLangException e) {
+            System.out.println(e);
+        }
 
         IStatement ex5 = new CompStmt(
                 new VarDeclStmt("v", new RefType(new IntType())), // Ref int v;
@@ -89,7 +112,12 @@ public class Main {
 
         IRepository repo5 = new Repository("log5.txt");
         Controller ctrl5 = new Controller(repo5,true);
-        ctrl5.setProgram(ex5);
+        try{
+            ctrl5.setProgram(ex5);
+            menu.addCommand(new RunExample("5",ex5.toString(),ctrl5));
+        } catch (ToyLangException e) {
+            System.out.println(e);
+        }
 
         IStatement ex6 = new CompStmt(
                 new VarDeclStmt("v", new RefType(new IntType())), // Ref int v;
@@ -115,7 +143,12 @@ public class Main {
         );
         IRepository repo6 = new Repository("log6.txt");
         Controller ctrl6 = new Controller(repo6,true);
-        ctrl6.setProgram(ex6);
+        try{
+            ctrl6.setProgram(ex6);
+            menu.addCommand(new RunExample("6",ex6.toString(),ctrl6));
+        } catch (ToyLangException e) {
+            System.out.println(e);
+        }
 
         IStatement ex7 = new CompStmt(
                 new VarDeclStmt("v", new RefType(new IntType())), // Ref int v;
@@ -138,7 +171,13 @@ public class Main {
         );
         IRepository repo7 = new Repository("log7.txt");
         Controller ctrl7 = new Controller(repo7,true);
-        ctrl7.setProgram(ex7);
+        try{
+            ctrl7.setProgram(ex7);
+            menu.addCommand(new RunExample("7",ex7.toString(),ctrl7));
+        } catch (ToyLangException e) {
+            System.out.println(e);
+        }
+
 
         IStatement ex8 = new CompStmt(
                 new VarDeclStmt("v", new RefType(new IntType())), // Ref int v;
@@ -158,7 +197,12 @@ public class Main {
         );
         IRepository repo8 = new Repository("log8.txt");
         Controller ctrl8 = new Controller(repo8,true);
-        ctrl8.setProgram(ex8);
+        try{
+            ctrl8.setProgram(ex8);
+            menu.addCommand(new RunExample("8",ex8.toString(),ctrl8));
+        } catch (ToyLangException e) {
+            System.out.println(e);
+        }
 
         IStatement ex9 = new CompStmt(
                 new VarDeclStmt("v", new IntType()), // int v;
@@ -178,7 +222,12 @@ public class Main {
         );
         IRepository repo9 = new Repository("log9.txt");
         Controller ctrl9 = new Controller(repo9,true);
-        ctrl9.setProgram(ex9);
+        try{
+            ctrl9.setProgram(ex9);
+            menu.addCommand(new RunExample("9",ex9.toString(),ctrl9));
+        } catch (ToyLangException e) {
+            System.out.println(e);
+        }
 
         IStatement ex10 = new CompStmt(
                 new VarDeclStmt("v", new IntType()), // int v;
@@ -213,7 +262,12 @@ public class Main {
 
         IRepository repo10 = new Repository("log10.txt");
         Controller ctrl10 = new Controller(repo10, true);
-        ctrl10.setProgram(ex10);
+        try{
+            ctrl10.setProgram(ex10);
+            menu.addCommand(new RunExample("10",ex10.toString(),ctrl10));
+        } catch (ToyLangException e) {
+            System.out.println(e);
+        }
 
         IStatement ex11 = new CompStmt(
                 new VarDeclStmt("a", new RefType(new IntType())), // Ref(int) a;
@@ -251,7 +305,12 @@ public class Main {
 
         IRepository repo11 = new Repository("log11.txt");
         Controller ctrl11 = new Controller(repo11, true);
-        ctrl11.setProgram(ex11);
+        try{
+            ctrl11.setProgram(ex11);
+            menu.addCommand(new RunExample("11",ex11.toString(),ctrl11));
+        } catch (ToyLangException e) {
+            System.out.println(e);
+        }
 
         IStatement ex12 = new CompStmt(
                 new VarDeclStmt("varf", new StringType()), // string varf;
@@ -285,23 +344,82 @@ public class Main {
         );
         IRepository repo12 = new Repository("log12.txt");
         Controller ctrl12 = new Controller(repo12, true);
-        ctrl12.setProgram(ex12);
+        try{
+            ctrl12.setProgram(ex12);
+            menu.addCommand(new RunExample("12",ex12.toString(),ctrl12));
+        } catch (ToyLangException e) {
+            System.out.println(e);
+        }
 
-        TextMenu menu = new TextMenu();
-        menu.addCommand(new ExitCommand("0", "exit"));
-        menu.addCommand(new RunExample("1",ex1.toString(),ctrl1));
-        menu.addCommand(new RunExample("2",ex2.toString(),ctrl2));
-        menu.addCommand(new RunExample("3",ex3.toString(),ctrl3));
-        menu.addCommand(new RunExample("4",ex4.toString(),ctrl4));
-        menu.addCommand(new RunExample("5",ex5.toString(),ctrl5)); // heap allocation example
-        menu.addCommand(new RunExample("6",ex6.toString(),ctrl6)); // heap read example
-        menu.addCommand(new RunExample("7",ex7.toString(),ctrl7)); // heap write example
-        menu.addCommand(new RunExample("8",ex8.toString(),ctrl8)); // garbage collector example
-        menu.addCommand(new RunExample("9",ex9.toString(),ctrl9)); // while statement example
-        menu.addCommand(new RunExample("10",ex10.toString(),ctrl10)); // fork statement example
-        menu.addCommand(new RunExample("11",ex11.toString(),ctrl11)); // fork statement example 2
-        menu.addCommand(new RunExample("12",ex12.toString(),ctrl12)); // fork statement example 3
+        IStatement ex13 = new CompStmt(
+                new VarDeclStmt("v", new IntType()), // int v;
+                new CompStmt(
+                        new AssignStmt("v", new ValueExp(new StringValue("hello"))), // v = "hello"; (Type Error: trying to assign a string to an int)
+                        new CompStmt(
+                                new WhileStmt( // while (v > 0)
+                                        new ArithExp(">", new VarExp("v"), new ValueExp(new IntValue(0))),
+                                        new CompStmt(
+                                                new PrintStmt(new VarExp("v")), // print(v);
+                                                new AssignStmt("v", new ArithExp("-", new VarExp("v"), new ValueExp(new IntValue(1)))) // v = v - 1
+                                        )
+                                ),
+                                new PrintStmt(new VarExp("v")) // print(v)
+                        )
+                )
+        );
+        IRepository repo13 = new Repository("log13.txt");
+        Controller ctrl13 = new Controller(repo13, true);
+        try{
+            ctrl13.setProgram(ex13);
+            menu.addCommand(new RunExample("13",ex13.toString(),ctrl13));
+        } catch (ToyLangException e) {
+            System.out.println("[Statement 13] " + e);
+        }
+
+        IStatement ex14 = new CompStmt(
+                new VarDeclStmt("v", new IntType()), // int v;
+                new CompStmt(
+                        new AssignStmt("v", new ValueExp(new IntValue(5))), // v = 5;
+                        new CompStmt(
+                                new PrintStmt(new ArithExp("+", new VarExp("v"), new ValueExp(new StringValue("hello")))), // v + "hello" (Type Error)
+                                new PrintStmt(new VarExp("v")) // print(v)
+                        )
+                )
+        );
+        IRepository repo14 = new Repository("log14.txt");
+        Controller ctrl14 = new Controller(repo14, true);
+        try{
+            ctrl14.setProgram(ex14);
+            menu.addCommand(new RunExample("14",ex14.toString(),ctrl14));
+        } catch (ToyLangException e) {
+            System.out.println("[Statement 14] " + e);
+            System.out.println("[Statement 14] Original code: " + ex14.toString());
+        }
+
+        IStatement ex15 = new CompStmt(
+                new VarDeclStmt("v", new IntType()), // int v;
+                new CompStmt(
+                        new AssignStmt("v", new ValueExp(new IntValue(1))), // v = 1;
+                        new IfStmt(
+                                new VarExp("v"), // if (v) (Type Error: v is not a boolean)
+                                new PrintStmt(new ValueExp(new StringValue("True"))),
+                                new PrintStmt(new ValueExp(new StringValue("False")))
+                        )
+                )
+        );
+        extracted(ex15, menu);
 
         menu.show();
+    }
+
+    private static void extracted(IStatement ex15, TextMenu menu) {
+        IRepository repo15 = new Repository("log15.txt");
+        Controller ctrl15 = new Controller(repo15, true);
+        try{
+            ctrl15.setProgram(ex15);
+            menu.addCommand(new RunExample("15", ex15.toString(),ctrl15));
+        } catch (ToyLangException e) {
+            System.out.println("[Statement 15] " + e);
+        }
     }
 }
