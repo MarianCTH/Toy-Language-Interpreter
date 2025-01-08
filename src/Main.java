@@ -1,3 +1,4 @@
+import ADT.Dictionary.GenericDictionary;
 import Controller.Controller;
 import Model.State.*;
 import Repository.IRepository;
@@ -39,7 +40,7 @@ public class Main extends Application {
         stage.setTitle("Program Selector");
 
         VBox layout = new VBox(10);
-        layout.setStyle("-fx-padding: 10;");
+        layout.setStyle("-fx-padding: 15;");
 
         ListView<IStatement> programListView = new ListView<>();
         programListView.setItems(FXCollections.observableArrayList(getPrograms()));
@@ -62,13 +63,18 @@ public class Main extends Application {
             IHeapTable heapTable = new HeapTable();
 
             PrgState initialState = new PrgState(executionStack, symTable, output, selectedProgram, fileTable, heapTable);
-            repository.add(initialState);
+            try {
+                selectedProgram.typecheck(new GenericDictionary<>());
+                repository.add(initialState);
 
-            // Reset prgStates based on the newly selected program
-            prgStates.setAll(repository.getPrgList());
+                // Reset prgStates based on the newly selected program
+                prgStates.setAll(repository.getPrgList());
 
-            // Update the number of prgStates in the UI
-            showExecutionWindow(stage);
+                // Update the number of prgStates in the UI
+                showExecutionWindow(stage);
+            } catch (ToyLangException e) {
+                showAlert(Alert.AlertType.ERROR, "Typecheck error",  "Unable to run. " + e.getMessage());
+            }
         });
 
         layout.getChildren().addAll(new Label("Select a program:"), programListView, selectButton);
@@ -151,6 +157,7 @@ public class Main extends Application {
         Scene scene = new Scene(root, 800, 600);
         stage.setScene(scene);
         stage.show();
+        refreshUI(prgStateCountField, heapTable, outListView, fileTableListView, prgStateIdListView, symTable, exeStackListView);
     }
 
     private List<IStatement> getPrograms() {
